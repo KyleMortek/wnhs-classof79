@@ -22,8 +22,8 @@
 }
 
 header{
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/spartanwithbackgroundnew.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/spartanwithbackgroundnew.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;  
