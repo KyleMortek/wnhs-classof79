@@ -3,14 +3,16 @@
   max-width: 1140px;
   margin: 0 auto;
 }
-
+.logo{
+  float: left;
+}
 
 .main-nav{
   float: right;
   list-style: none;
   margin-right: 40px;
   margin-top: 55px;
-
+  padding-bottom: 55px;
 }
 .main-nav li{
   display: inline-block;
@@ -18,16 +20,40 @@
 }
 .main-nav li a:link,
 .main-nav li a:visited{
+  padding: 8px 0px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom:2px solid transparent;
+  -webkit-transition: border-bottom 0.2;
+  -webkit-transition: border-bottom 1s;
+  transition: border-bottom 1s;
 
 }
-
+.sticky{
+  /* display: none; */
+}
+.menu{
+  display: none;
+}
 header{
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
-  background-size: cover;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* margin-top: 20px; */
+  /* max-height: 50%; */
+  /* max-width: 100%; */
+  background-color: #366052;
+  /* margin-bottom: 100px; */
+  /* background-size: cover;
   background-attachment: fixed;
   background-position: center;  
   background-repeat: no-repeat;
   height: 100vh;
-  min-height: 100%;
+  min-height: 100%; */
 }
