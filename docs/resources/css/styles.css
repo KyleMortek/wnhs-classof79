@@ -5,23 +5,28 @@
 }
 .logo{
   float: left;
+
+  /* height: 7%; */
+  /* width: 7%; */
+  margin-top: 5px;
 }
 
 .main-nav{
   float: right;
   list-style: none;
-  margin-right: 40px;
-  margin-top: 55px;
-  padding-bottom: 55px;
+  margin-right: 10px;
+  margin-top: 35px;
+  padding-bottom: 15px;
+  padding-left: 0px;
 }
 .main-nav li{
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 15px;
 }
 .main-nav li a:link,
 .main-nav li a:visited{
   padding: 8px 0px;
-  color: #fff;
+  color: #366052;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
@@ -31,25 +36,39 @@
   transition: border-bottom 1s;
 
 }
-.sticky .main-nav{
-  /* display: none; */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 2px rgb(37, 37, 37);
+          box-shadow: 0 2px 2px rgb(37, 37, 37);
+  /* z index makes the nav bar be on the top of the screen */
+  z-index: 9999;
 }
+.s{
+  /* + */
+}
+
 .menu{
   display: none;
 }
 header{
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(img/spartanwithbackgroundnew.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
   background-size: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   /* width: 100vw; */
+  /* width: 100vw; */
   /* margin-top: 20px; */
   /* max-height: 50%; */
   /* max-width: 100%; */
   background-color: #366052;
+
   /* margin-bottom: 100px; */
   /* background-size: cover;
   background-attachment: fixed;
@@ -102,15 +121,45 @@ h2:after{
   margin-top: 30px;
 
 }
-h3{
-  /* padding-bottom: 50 */
-  /* margin-top: 8px; */
-  /* padding: */
-  /* float:; */
+/* h3{
+
   margin-top: 10px;
   font-family: 'NCAA Michigan St Spartans';
-  /* margin-right: 10px; */
+
   text-align: center;
   font-size: 100px;
 
+} */
+/* .newh3{
+
+} */
+
+.icon-small{
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+.box{
+  padding: 0%
+}
+.section{
+  padding: 80px;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.city-feature{
+  margin-bottom: 5px;
+}
+h3{
+  text-align: center;
 }

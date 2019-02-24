@@ -1,3 +1,4 @@
+
 @media only screen and (max-width: 820px) {
   header{
     /* 366052 background color*/
@@ -12,7 +13,7 @@
     /* width: auto\9; ie8 */
   }
   .sticky .menu{
-    /* width: 10vw; */
+
     display: inline-block;
     position: fixed;
     bottom: 5px;
@@ -20,20 +21,17 @@
     border: 5px solid #366052;
     background-color:  #366052;
     border-radius: 50%;
-    /* border-right: -5px; */
+
     width: 35px;
     height: 35px;
     font-size: 30px;
-    /* margin-left: 3px; */
-    /* margin-right: 3px; */
-    /* border-left: 100px; */
-    /* border-right:100px; */
+
   }
   .barm {
     margin-right: 30px;
     right: 3px;
     line-height: 3px;
-    /* font-size: 30px; */
+ 
   }
   .menu div{
     color: rgba(238, 207, 29, 0.768);
@@ -54,11 +52,15 @@
   .logo{
     /* height: ; */
     width:10vw;
+    /* height: 10vh; */
     /* font-size: 0.5vw; */
     /* maxw */
   }
   h3{
     width: 8vw;
+  }
+  .main-nav{
+    display: none;
   }
 }
 @media only screen and (max-height: 500px){
