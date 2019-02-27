@@ -28,6 +28,7 @@
 
   }
   .barm {
+    /* display: none; */
     margin-right: 30px;
     right: 3px;
     line-height: 3px;
@@ -40,15 +41,18 @@
     padding: 3px;
     padding-left: 4px;
   }
-  .sticky {
-    /* position:fi */
-    float:right;
-    display: contents;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
+  .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: #555; }
+  /* .sticky { */
+    /* float:right; */
+    /* display: contents; */
+    /* position: fixed; */
+    /* bottom: 0px; */
+    /* right: 0px; */
 
-  }
+  /* } */
   .logo{
     /* height: ; */
     width:10vw;
@@ -59,16 +63,32 @@
   h3{
     width: 8vw;
   }
-  .main-nav{
-    display: none;
-  }
+  .main-nav { display: none; }
+  .menu{display: inline-block;}
+.main-nav{
+  position: fixed;
+    top:-10vh;
+    /* bottom: -44px; */
+    bottom: -10vh;
+    right: 10vw;
+    border: 130px solid #366052;
+    /* color: aqua; */
+    background-color:  #366052;
+    font-size: 8vw;
+    /* border-radius: 20%; */
+}
+  .main-nav li {
+    display: block;
+    
+    /* float: right; */
+}
 }
 @media only screen and (max-height: 500px){
   header{
     /* 366052 background color*/
     
     /* background-attachment: ; */
-  background-size: 100%;
+  /* background-size: 100%; */
 
   /* width: 100vh; */
   /* min-height: 100%; */

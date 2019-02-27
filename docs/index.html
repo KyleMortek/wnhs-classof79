@@ -17,7 +17,6 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
 
 
-  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
@@ -41,27 +40,35 @@
     <nav class="sticky">
       <div class="row s">
         <img class="logo" src="resources/css/img/logo-north-high75.png" alt=" Logo">
-        <div class="m-att">
-          <a class="menu" href="#">
-            <div class="barm">
+        <!-- <div class="m-att"> -->
+          <a class="menu js--menu">
+            <div class="barm ">
               <i class="fas fa-bars "></i>
             </div>
           </a>
-        </div>
-        <ul class="main-nav clearfix js--main-nav">
+        <!-- </div> -->
+        <ul class="main-nav"> 
+          <!-- clearfix js--main-nav bbb"> -->
           <li><a href="#Home">Home</a></li>
-          <li><a href="#Past">The Past</a></li>
-          <li><a href="#Present">The Present</a></li>
+          <li><a href="#Past">Past</a></li>
+          <li><a href="#Present">Present</a></li>
           <li><a href="#Events">Events</a></li>
           <li><a href="#Calendar">Calendar</a></li>
           <li><a href="#Payment">Payment</a></li>
           <li><a href="#Hotels">Hotels</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
-        <span>
-          <!-- <h3>class of 79</h3> -->
-
-        </span>
+        <ul class="main-nav stickyMobile ">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Past">Past</a></li>
+          <li><a href="#Present">Present</a></li>
+          <li><a href="#Events">Events</a></li>
+          <li><a href="#Calendar">Calendar</a></li>
+          <li><a href="#Payment">Payment</a></li>
+          <li><a href="#Hotels">Hotels</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <!-- <a class="mobile-nav-icon js--menu"><i class="ion-ios-menu"></i></a> -->
       </div>
     </nav>
     <!-- add title in here somewhere 2019-02-21 15:36:23-->
@@ -100,7 +107,7 @@
         </div>
         <div class="event-feature">
           <i class="far fa-compass icon-small"></i>
-          <a href="#">Get Directions HERE</a>
+          <a href="http://maps.apple.com/?daddr=The+Irishman+Pub+and+Eatery&dirflg=d&t=h">Get Directions HERE</a>
         </div>
       </div>
 
@@ -121,7 +128,7 @@
         </div>
         <div class="event-feature">
           <i class="far fa-compass icon-small"></i>
-          <a href="#">Get Directions HERE</a>
+          <a href="http://maps.apple.com/?daddr=Buffalo+River+History+Tours&dirflg=d&t=h">Get Directions HERE</a>
         </div>
       </div>
 
@@ -142,7 +149,7 @@
         </div>
         <div class="event-feature">
           <i class="far fa-compass icon-small"></i>
-          <a href="#">Get Directions HERE</a>
+          <a href="http://maps.apple.com/?daddr=Tewksbury+Lodge&dirflg=d&t=h">Get Directions HERE</a>
         </div>
       </div>
 
@@ -163,7 +170,7 @@
         </div>
         <div class="event-feature">
           <i class="far fa-compass icon-small"></i>
-          <a href="#">Get Directions HERE</a>
+          <a href="http://maps.apple.com/?daddr=bisons+stadium+address&dirflg=d&t=h">Get Directions HERE</a>
         </div>
       </div>
     </div>
@@ -201,8 +208,9 @@
     <div class="row">
       <h2>Contact</h2>
     </div>
+
     <div class="row">
-      <form method="post" action="#" class="contact-form">
+      <form id="contact-form">
         <div class="row">
           <div class="col span-1-of-3">
             <label for="name">Name</label>
@@ -232,20 +240,38 @@
             <label for="">&nbsp;</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="submit" value="Send it!!">
+            <button id="submitBtn">SEND IT</button>
+            <!-- <input type="submit" value="Send it!!" id="submitBtn"> -->
           </div>
         </div>
       </form>
     </div>
   </section>
 
+  <!-- Hello, today is <php echo date('l, F jS, Y'); > -->
+  <!-- <script ></script> -->
 
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCmX5Gi8OQ7NlOwE8BEemDP6jxTVObGh0k",
+      authDomain: "wnhsclassof79reunion.firebaseapp.com",
+      databaseURL: "https://wnhsclassof79reunion.firebaseio.com",
+      projectId: "wnhsclassof79reunion",
+      storageBucket: "wnhsclassof79reunion.appspot.com",
+      messagingSenderId: "241208802120"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 
-
+  <script src="resources/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- <script src="lodash.js"></script> -->
   <script src="vendor/js/jquery.waypoints.min.js"></script>
   <script src="resources/js/wnhs79.js"></script>
+  <script src="resources/js/contact-form.js"></script>
 </body>
 
 </html>
