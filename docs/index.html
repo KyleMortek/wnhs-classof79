@@ -41,14 +41,13 @@
       <div class="row s">
         <img class="logo" src="resources/css/img/logo-north-high75.png" alt=" Logo">
         <!-- <div class="m-att"> -->
-          <a class="menu js--menu">
-            <div class="barm ">
-              <i class="fas fa-bars "></i>
-            </div>
-          </a>
+        <!-- <a class="menu js--menu">
+          <div class="barm ">
+            <i class="fas fa-bars "></i>
+          </div>
+        </a> -->
         <!-- </div> -->
-        <ul class="main-nav"> 
-          <!-- clearfix js--main-nav bbb"> -->
+        <ul class="main-nav clearfix js--main-nav bbb"> 
           <li><a href="#Home">Home</a></li>
           <li><a href="#Past">Past</a></li>
           <li><a href="#Present">Present</a></li>
@@ -58,19 +57,15 @@
           <li><a href="#Hotels">Hotels</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
-        <ul class="main-nav stickyMobile ">
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Past">Past</a></li>
-          <li><a href="#Present">Present</a></li>
-          <li><a href="#Events">Events</a></li>
-          <li><a href="#Calendar">Calendar</a></li>
-          <li><a href="#Payment">Payment</a></li>
-          <li><a href="#Hotels">Hotels</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
+       
         <!-- <a class="mobile-nav-icon js--menu"><i class="ion-ios-menu"></i></a> -->
       </div>
     </nav>
+    <a class="menu js--menu">
+      <div class="barm ">
+        <i class="fas fa-bars "></i>
+      </div>
+    </a>
     <!-- add title in here somewhere 2019-02-21 15:36:23-->
     <div class="title">
       <!-- TODO: put ~CLASS OF '79~ somewhere; either here or in nav bar' -->
@@ -235,6 +230,43 @@
             <textarea name="message" id="message" cols="20" rows="5" placeholder="Message"></textarea>
           </div>
         </div>
+<!-- 2019-02-27 17:25:17 -->
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="Tbury">THE TEWKSBURY LODGE</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="Tbury" id="Tbury" placeholder="YES/NO if attending" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="Irishman">The Irishman Pub</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type= "text" name="Irishman" id="Irishman" placeholder="YES/NO if attending" required>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="Bisons Game">Bisons Game</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="Bisons" id="Bisons Game" placeholder="YES/NO if attending" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="BRHT">Buffalo River History Tour</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="BRHT" id="BRHT" placeholder="YES/NO if attending" required>
+          </div>
+        </div>
+<!-- 2019-02-27 17:25:26 -->
         <div class="row">
           <div class="col span-1-of-3">
             <label for="">&nbsp;</label>
@@ -248,9 +280,9 @@
     </div>
   </section>
 
-  <!-- Hello, today is <php echo date('l, F jS, Y'); > -->
-  <!-- <script ></script> -->
-
+<!-- #################################################################### -->
+<!-- #################################################################### -->
+<!-- firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -264,6 +296,10 @@
     };
     firebase.initializeApp(config);
   </script>
+<!-- #################################################################### -->
+<!-- #################################################################### -->
+
+
   <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 
   <script src="resources/jquery.min.js"></script>
@@ -272,6 +308,9 @@
   <script src="vendor/js/jquery.waypoints.min.js"></script>
   <script src="resources/js/wnhs79.js"></script>
   <script src="resources/js/contact-form.js"></script>
+<?php
+echo "My first PHP script!";
+?>
 </body>
 
 </html>

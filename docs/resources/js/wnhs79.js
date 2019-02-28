@@ -12,20 +12,12 @@
 
 //   }
 // });
-  $(window).resize(function () {
-    if ($(window).width() >= 820) {
-      console.log('here >820');
-      // location.reload();
-    }
-    if ($(window).width() <= 820) {
-      console.log('here <820');
-    }
-  });
+
 $(document).ready(function () {
 
   // sticking navigation
   // if( $(window).scrollTop()){
-    // $("nav").css('display','block');
+  // $("nav").css('display','block');
   // }
   // $(window).resize(function () {
   //   if ($(window).width() >= 820) {
@@ -40,56 +32,55 @@ $(document).ready(function () {
 
 
   // $(window).resize(function () {
-    if ($(window).width() >= 820) {
-       console.log('this is where stick navigation plays a roll');
-      // $('nav').addClass('sticky');
-      $('*').waypoint(function (direction) {
-    // if ($(window).width() >= 820) {
+  if ($(window).width() >= 820) {
+    console.log('this is where stick navigation plays a roll');
+    //  $('nav').css("display","block");
+    $('*').waypoint(function (direction) {
+      // if ($(window).width() >= 820) {
 
-        if (direction == "up") {
+      if (direction == "up") {
 
-          $('nav').slideDown(200);
-          console.log("up");
-          // $('nav').addClass('sticky').slideDown(200);
-          // $('.sticky').slideDown(200);
-        } else {
-          // nav.slideToggle(200);
-          // $('nav').slideToggle(200);
-          $('nav').slideUp(200);
-        }
-      // }
-      }, {
-        offset: '60px'
-      });
-    }
-
-
-    //  $(window).resize(function () {
-    //   if ($(window).width() >= 820 && $('.main-nav').css('display') === 'none') {
-    //     // alert("not visible");
-    //     $('.main-nav').css('display', 'block');
-    //   }
-    //   if ($(window).width() <= 820 && $('.main-nav').css('display') === 'block') {
-    //     $('.main-nav').css('display', 'none');
-    //   }
-    // });
-    $('.js--menu').click(function () {
-      let nav = $('.js--main-nav');
-      let icon = $('.js--menu div i');
-      nav.slideToggle(200);
-      if (icon.hasClass('fas fa-bars')) {
-        icon.addClass('ion-ios-close-circle');
-        icon.removeClass('fas fa-bars');
+        $('nav').slideDown(200);
+        // console.log("up");
+        // $('nav').addClass('sticky').slideDown(200);
+        // $('.sticky').slideDown(200);
       } else {
-        icon.addClass('fas fa-bars');
-        icon.removeClass('ion-ios-close-circle');
+        // nav.slideToggle(200);
+        // $('nav').slideToggle(200);
+        $('nav').slideUp(200);
       }
+      // }
+    }, {
+      // offset: '60px'
     });
+   } else {
+  //   console.log("its not a big screen");
+  //   // location.reload();
+   }
+  // // });
+
+
+  //////////////////// 
+  //////////////////// 
+  //////////////////// MENU BUTTON FOR MOBILE 
+  $('.js--menu').click(function () {
+    let nav = $('.js--main-nav');
+    let icon = $('.js--menu div i');
+    nav.slideToggle(200);
+    if (icon.hasClass('fas fa-bars')) {
+      icon.addClass('ion-ios-close-circle');
+      icon.removeClass('fas fa-bars');
+    } else {
+      icon.addClass('fas fa-bars');
+      icon.removeClass('ion-ios-close-circle');
+    }
+    });
+  // $('nav').css('display','block');
 
   // });
 
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
+  ///////////////////////////////////////////////////
+  ///////////////////////////////////////////////////
   // SMOOTH SCROLLING 
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
