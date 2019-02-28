@@ -1,34 +1,34 @@
-// document.getElementById('contact-form').addEventListener('submit', function (e) {
-//   e.preventDefault();
-//   let name = e.target.elements.name.value;
-//   let email = e.target.elements.email.value;
-//   let message = e.target.elements.message.value;
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let name = e.target.elements.name.value;
+  let email = e.target.elements.email.value;
+  let message = e.target.elements.message.value;
 
-//   let Tbury = e.target.elements.Tbury.value;
-//   let Irish = e.target.elements.Irishman.value;
-//   let BT = e.target.elements.BRHT.value;
-//   let Bisons = e.target.elements.Bisons.value;
+  let Tbury = e.target.elements.Tbury.value;
+  let Irish = e.target.elements.Irishman.value;
+  let BT = e.target.elements.BRHT.value;
+  let Bisons = e.target.elements.Bisons.value;
 
-//   let data = {
-//     name: name,
-//     email: email,
-//     message: message,
-//     Tbury: Tbury,
-//     Irishman: Irish,
-//     BT: BT,
-//     Bisons:Bisons 
-//   };
-//   var firebaseRef = firebase.database().ref();
-//   firebaseRef.child("students").push(email).set(data);
-//   // firebaseRef.child(email).set(data);
+  let data = {
+    name: name,
+    email: email,
+    message: message,
+    Tbury: Tbury,
+    Irishman: Irish,
+    BT: BT,
+    Bisons:Bisons 
+  };
+  var firebaseRef = firebase.database().ref();
+  firebaseRef.child("students").push(email).set(data);
+  // firebaseRef.child(email).set(data);
 
-//   // var rootRef = firebase.database.ref();
-//   // document.getElementById('submitBtn').addEventListener('click',function(e){
-//     document.getElementById('contact-form').remove();
-//     document.getElementById('Recieved').textContent="Submission Complete";
+  // var rootRef = firebase.database.ref();
+  // document.getElementById('submitBtn').addEventListener('click',function(e){
+    document.getElementById('contact-form').remove();
+    document.getElementById('Recieved').textContent="Submission Complete";
     
-//   // });
-// }); 
+  // });
+}); 
 
 // var firebaseRef = firebase.database().ref();
 // var urlRef = firebaseRef.child("students");
