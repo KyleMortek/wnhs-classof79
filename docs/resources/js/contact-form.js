@@ -19,10 +19,10 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     Bisons:Bisons 
   };
   var firebaseRef = firebase.database().ref();
-  firebaseRef.child("students").push().set(data);
+  firebaseRef.child("students").set(email);
 
   // var rootRef = firebase.database.ref();
-});
+});  
 var firebaseRef = firebase.database().ref();
 var urlRef = firebaseRef.child("students");
 urlRef.once("value", function (snapshot) {
@@ -40,3 +40,5 @@ urlRef.once("value", function (snapshot) {
     );
   });
 });
+// for refreshing database BE CAREFUL WITH THAT 
+// urlRef.remove();
