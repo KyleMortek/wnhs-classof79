@@ -23,6 +23,9 @@
   display: inline-block;
   margin-left: 15px;
 }
+#Payment{
+  text-align: center; 
+}
 .main-nav li a:link,
 .main-nav li a:visited{
   padding: 8px 0px;
@@ -68,23 +71,53 @@ input[type='checkbox'] {
   border:2px solid #555;
 }
 .CB{
-  border-color: #366052;
+  border-color: #010504;
   border: 10px;
+  background-color: #4b4a44d7;
+    content: " ";
+    width:auto;
+    /* margin: 0 auto; */
+    margin-top: 30px;
+    margin-bottom: 3px;
+  
+}
+.ct{
+  padding-top: 20px;
+  /* line-height: -10px; */
+}
+.btt{
+  text-align: center;
+  font-size: 40px;
 }
 .section-contact{
   background-color: #366052;
   color: #e6d922d7;
 }
 input[type='checkbox']:checked {
-  background: #366052;
+  background: #e6d922d7;
 }
 .cb .cbText{
   margin-bottom: 10px;
+  
+  
+}
+.cbText:after{
+  
+    display: block;
+    height: 2px;
+    background-color: #e6d922d7;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 3px;
+  
 }
 .cbText{
   float:left;
   margin-top: 15px;
   margin-right: 3px;
+  
 }
 
 .clearfix {zoom:1};
@@ -154,6 +187,7 @@ h2{
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: 1px;
+  font-family: 'Laila';
 }
 h2:after{
   display: block;
@@ -205,5 +239,14 @@ h2:after{
   margin-bottom: 5px;
 }
 h3{
+  
+  text-align: center;
+}
+p{
+  text-transform: uppercase;
+  text-align: center;
+}
+.boximg{
+  /* border-bottom-left-radius: 50%; */
   text-align: center;
 }
