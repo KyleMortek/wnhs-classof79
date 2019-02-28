@@ -67,8 +67,16 @@ input[type='checkbox'] {
   border-radius:5px;
   border:2px solid #555;
 }
+.CB{
+  border-color: #366052;
+  border: 10px;
+}
+.section-contact{
+  background-color: #366052;
+  color: #e6d922d7;
+}
 input[type='checkbox']:checked {
-  background: #abd;
+  background: #366052;
 }
 .cb .cbText{
   margin-bottom: 10px;

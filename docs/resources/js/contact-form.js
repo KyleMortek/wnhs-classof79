@@ -28,7 +28,27 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     document.getElementById('Recieved').textContent="Submission Complete";
     
   // });
-});    
+}); 
+document.getElementById('BRHT').addEventListener('change',function(e){
+  e.preventDefault();
+  e.target.checked;
+  console.log(e.target.checked);
+});
+document.getElementById('Tbury').addEventListener('change',function(e){
+  e.preventDefault();
+  e.target.checked;
+  console.log(e.target.checked);
+});
+document.getElementById('Irishman').addEventListener('change',function(e){
+  e.preventDefault();
+  e.target.checked;
+  console.log(e.target.checked);
+});
+document.getElementById('BisonsGame').addEventListener('change',function(e){
+  e.preventDefault();
+  e.target.checked;
+  console.log(e.target.checked);
+});   
 var firebaseRef = firebase.database().ref();
 var urlRef = firebaseRef.child("students");
 urlRef.once("value", function (snapshot) {
