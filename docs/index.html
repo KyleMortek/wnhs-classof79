@@ -236,7 +236,9 @@
             <label for="Tbury">THE TEWKSBURY LODGE</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="Tbury" id="Tbury" placeholder="YES/NO if attending" required>
+            <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending" >
+            <div  class="cbText" >Check if attending</span>
+
           </div>
         </div>
 
@@ -244,8 +246,10 @@
           <div class="col span-1-of-3">
             <label for="Irishman">The Irishman Pub</label>
           </div>
-          <div class="col span-2-of-3">
-            <input type= "text" name="Irishman" id="Irishman" placeholder="YES/NO if attending" required>
+          <div class="col span-2-of-3 cb">
+            <input type= "checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending" >
+            <div  class="cbText" >Check if attending</span>
+
           </div>
         </div>
         
@@ -254,7 +258,9 @@
             <label for="Bisons Game">Bisons Game</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="Bisons" id="Bisons Game" placeholder="YES/NO if attending" required>
+            <input type="checkbox" name="Bisons" id="Bisons Game" placeholder="YES/NO if attending" >
+            <div  class="cbText">Check if attending</div>
+
           </div>
         </div>
 
@@ -263,7 +269,8 @@
             <label for="BRHT">Buffalo River History Tour</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="BRHT" id="BRHT" placeholder="YES/NO if attending" required>
+            <input type="checkbox" name="BRHT" id="BRHT" placeholder="YES/NO if attending" >
+            <div class="cbText" >Check if attending</div>
           </div>
         </div>
 <!-- 2019-02-27 17:25:26 -->
@@ -277,6 +284,7 @@
           </div>
         </div>
       </form>
+      <div id="Recieved"></div>
     </div>
   </section>
 
@@ -308,9 +316,9 @@
   <script src="vendor/js/jquery.waypoints.min.js"></script>
   <script src="resources/js/wnhs79.js"></script>
   <script src="resources/js/contact-form.js"></script>
-<?php
-echo "My first PHP script!";
-?>
+<!-- <?php -->
+<!-- echo "My first PHP script!"; -->
+<!-- ?> -->
 </body>
 
 </html>

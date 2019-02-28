@@ -59,15 +59,31 @@
   /* z index makes the nav bar be on the top of the screen */
   z-index: 9999;
 }
-.bbb{
-  display:block;
+input[type='checkbox'] {
+  -webkit-appearance:none;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+input[type='checkbox']:checked {
+  background: #abd;
+}
+.cb .cbText{
+  margin-bottom: 10px;
+}
+.cbText{
+  float:left;
+  margin-top: 15px;
+  margin-right: 3px;
 }
 
 .clearfix {zoom:1};
 .clearfix {
   content: '.';
   clear: both;
-  display: block;
+  display: inline-block;
   height: 0;
   visibility: hidden;
 }

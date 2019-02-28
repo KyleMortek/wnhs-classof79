@@ -19,10 +19,16 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     Bisons:Bisons 
   };
   var firebaseRef = firebase.database().ref();
-  firebaseRef.child("students").set(email);
+  firebaseRef.child("students").push(email).set(data);
+  // firebaseRef.child(email).set(data);
 
   // var rootRef = firebase.database.ref();
-});  
+  // document.getElementById('submitBtn').addEventListener('click',function(e){
+    document.getElementById('contact-form').remove();
+    document.getElementById('Recieved').textContent="Submission Complete";
+    
+  // });
+});    
 var firebaseRef = firebase.database().ref();
 var urlRef = firebaseRef.child("students");
 urlRef.once("value", function (snapshot) {
@@ -40,5 +46,16 @@ urlRef.once("value", function (snapshot) {
     );
   });
 });
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
 // for refreshing database BE CAREFUL WITH THAT 
 // urlRef.remove();
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+
+// document.getElementById('submitBtn').addEventListener('click',function(e){
+//   document.getElementById('contact-form').remove();
+//   document.getElementById('Recieved').textContent="Submission Complete";
+// });
