@@ -4,60 +4,24 @@
 // iconTest.id = "iconTest";
 ////////////////////////////////////////////////
 //////////////////////////////////////////////// SMOOTH SCROLLING 
-// Select all links with hashes
-// $(window).resize(function () {
-//   if ($(window).width() >= 820) {
-//     console.log('here >820');
-//     location.reload();
-
-//   }
-// });
-
 $(document).ready(function () {
-
-  // sticking navigation
-  // if( $(window).scrollTop()){
-  // $("nav").css('display','block');
-  // }
-  // $(window).resize(function () {
-  //   if ($(window).width() >= 820) {
-  //     console.log('here >820');
-  //   }
-  //   if ($(window).width() <= 820) {
-  //     console.log('here <820');
-  //   }
-  //   location.reload();
-  // });
-
-
-
   // $(window).resize(function () {
   if ($(window).width() >= 820) {
-    console.log('this is where stick navigation plays a roll');
+    // console.log('this is where stick navigation plays a role');
     //  $('nav').css("display","block");
     $('*').waypoint(function (direction) {
       // if ($(window).width() >= 820) {
 
       if (direction == "up") {
-
         $('nav').slideDown(200);
-        // console.log("up");
-        // $('nav').addClass('sticky').slideDown(200);
-        // $('.sticky').slideDown(200);
       } else {
-        // nav.slideToggle(200);
-        // $('nav').slideToggle(200);
         $('nav').slideUp(200);
       }
-      // }
+
     }, {
-      // offset: '60px'
+      offset: '60px'
     });
-   } else {
-  //   console.log("its not a big screen");
-  //   // location.reload();
    }
-  // // });
 
 
   //////////////////// 

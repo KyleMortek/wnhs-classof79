@@ -14,7 +14,7 @@
 .main-nav{
   float: right;
   list-style: none;
-  margin-right: 10px;
+  margin-right: 50px;
   margin-top: 35px;
   padding-bottom: 15px;
   padding-left: 0px;
@@ -70,6 +70,15 @@ input[type='checkbox'] {
   border-radius:5px;
   border:2px solid #555;
 }
+#sendmoney{
+  margin-top: 80px;
+}
+#Recieved{
+  background-color: #366052;
+  border: 2px solid #e6d922d7;
+  color: #e6d922d7;
+  font-size: 40px;
+}
 .CB{
   border-color: #010504;
   border: 10px;
@@ -79,7 +88,7 @@ input[type='checkbox'] {
     /* margin: 0 auto; */
     margin-top: 30px;
     margin-bottom: 3px;
-  
+  text-transform: uppercase;
 }
 .ct{
   padding-top: 20px;
@@ -117,7 +126,7 @@ input[type='checkbox']:checked {
   float:left;
   margin-top: 15px;
   margin-right: 3px;
-  
+  /* text-transform: uppercase; */
 }
 
 .clearfix {zoom:1};

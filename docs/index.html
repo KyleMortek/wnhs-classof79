@@ -85,8 +85,8 @@
     <div class="row js--wp3">
 
 
-      <div class="col span-1-of-4 box">
-        <img src="resources/css/img/2irishman-pub-eateryr.jpg" alt="">
+      <div class="col span-1-of-5 box">
+        <img src="resources/css/img/2irishman-pub-eateryr.jpg" alt="Irish">
         <h3 class="">The Irishman</h3>
         <div class="event-feature">
           <i class="ion-ios-beer icon-small"></i>
@@ -106,8 +106,30 @@
         </div>
       </div>
 
-      <div class="col span-1-of-4 box">
-        <img src="resources/css/img/3BRHTr.png" alt="">
+      <!-- Old Home Days -->
+      <div class="col span-1-of-5 box">
+        <img src="resources/css/img/OHD2016.png" alt="OHD">
+        <h3 class="">Old Home Days</h3>
+        <div class="event-feature">
+          <i class="fa fa-ship icon-small"></i>
+          Touring Buffalo
+        </div>
+        <div class="event-feature">
+          <i class="far fa-calendar-alt icon-small"></i>
+          July 19th
+        </div>
+        <div class="event-feature">
+          <i class="far fa-clock icon-small"></i>
+          4:30pm &dash; 6pm &hookleftarrow;;
+        </div>
+        <div class="event-feature">
+          <i class="far fa-compass icon-small"></i>
+          <a href="http://maps.apple.com/?daddr=Buffalo+River+History+Tours&dirflg=d&t=h">Get Directions HERE</a>
+        </div>
+      </div>
+
+      <div class="col span-1-of-5 box">
+        <img src="resources/css/img/3BRHTr.png" alt="BRHT">
         <h3 class="">Buffalo River Tours</h3>
         <div class="event-feature">
           <i class="fa fa-ship icon-small"></i>
@@ -127,8 +149,8 @@
         </div>
       </div>
 
-      <div class="col span-1-of-4 box">
-        <img src="resources/css/img/1tbr.jpg" alt="">
+      <div class="col span-1-of-5 box">
+        <img src="resources/css/img/1tbr.jpg" alt="Tbury">
         <h3 class="">The Tewksbury Lodge</h3>
         <div class="event-feature">
           <i class="ion-md-restaurant icon-small"></i>
@@ -148,7 +170,7 @@
         </div>
       </div>
 
-      <div class="col span-1-of-4 box">
+      <div class="col span-1-of-5 box">
         <img src="resources/css/img/4Buffalo-Bisons-gamer.jpg" alt="">
         <h3 class="">Bisons Game</h3>
         <div class="event-feature">
@@ -178,11 +200,11 @@
     <h2>Payment</h2>
     <p>Click below to choose payment type</p>
     <div class="row">
-      <div class="col span-1-of-2 box">
-        <a href="#needlink"><img src="resources/icons/pp.svg" alt=""></a>
+      <div class="col span-2-of-4 box">
+        <a href="#needlink"><img src="resources/icons/pp.svg" alt="paypal"></a>
       </div>
-      <div class="col span-1-of-2 box">
-        <a href="#needlink"><img src="resources/icons/cash.svg" alt=""></a>
+      <div class="col span-2-of-4 box">
+        <a href="#needlink" id="check"><img id = "cashimg"src="resources/icons/cash.svg" alt="cash/check"></a>
       </div>
 
     </div>
@@ -191,18 +213,20 @@
     <h2>Hotels</h2>
     <p>Click below to choose a hotel</p>
     <div class="row">
-      <div class="col span-1-of-2 boximg">
+      <div class="col span-1-of-2 box">
+        <!-- img"> -->
 
         <a href="http://maps.apple.com/?q=marriott+hotel&sll=42.9550473,-78.777636&z=13&t=s"><img src="resources/css/img/mh.jpg"
             alt=""></a>
       </div>
-      <div class="col span-1-of-2 boximg">
+      <div class="col span-1-of-2 box">
+        <!-- img"> -->
         <a href="http://maps.apple.com/?q=hampton+inn&sll=42.9550473,-78.777636&z=13&t=s"><img src="resources/css/img/hh.jpg"
             alt=""></a>
       </div>
 
     </div>
-    
+
   </section>
   <section class="section-contact" id="Contact">
     <div class="row">
@@ -278,25 +302,33 @@
             <div class="cbText">Check if attending</div>
           </div>
         </div>
-        <!-- 2019-02-27 17:25:26 -->
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label for="">&nbsp;</label>
+        <div class="row CB">
+          <div class="col span-1-of-3 ct">
+            <label for="OHD">OLD HOME DAYS</label>
           </div>
-          <div class="col span-2-of-3 btt">
-            <button id="submitBtn">SEND IT</button>
-            <!-- <input type="submit" value="Send it!!" id="submitBtn"> -->
+          <div class="col span-2-of-3">
+            <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending">
+            <div class="cbText">Check if attending</div>
           </div>
         </div>
+        <!-- 2019-02-27 17:25:26 -->
+        <div class="row btt">
+          <button id="submitBtn">SEND IT</button>
+        </div>
       </form>
-      <div id="Recieved"></div>
+      <div class="row">
+        <div id="Recieved btt">
+
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- #################################################################### -->
   <!-- #################################################################### -->
   <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -308,7 +340,8 @@
       messagingSenderId: "241208802120"
     };
     firebase.initializeApp(config);
-  </script>
+  </script> -->
+
   <!-- #################################################################### -->
   <!-- #################################################################### -->
 

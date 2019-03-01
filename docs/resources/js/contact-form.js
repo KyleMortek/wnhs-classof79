@@ -66,7 +66,26 @@ document.getElementById('BisonsGame').addEventListener('change',function(e){
   e.preventDefault();
   e.target.checked;
   console.log(e.target.checked);
-});    
+});  
+document.getElementById('check').addEventListener('click',function(e){
+  e.preventDefault();
+  document.getElementById("cashimg").remove();
+  let newElem = document.createElement('p');
+  let newE2 = document.createElement('p');
+  newE2.id = "address";
+  newE2.textContent= 'PO BOX 545';
+  let newE3 = document.createElement('p');
+  newE3.id = "address1";
+  newE3.textContent= 'Clarence, NY 14032';
+  newElem.id = 'sendmoney';
+  newElem.textContent = "Please send cash and check to this address";
+  document.getElementById('check').appendChild(newElem);
+  document.getElementById('check').appendChild(newE2);
+  document.getElementById('check').appendChild(newE3);
+  
+  console.log(e.target.value);
+  // e.target.value = ''; 
+});  
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
