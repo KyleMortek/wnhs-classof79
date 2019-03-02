@@ -51,7 +51,7 @@ urlRef.once("value", function (snapshot) {
     Bisons:   ${child.val().Bisons}
     OHD:      ${child.val().OHD}`
     );
-  });
+  }); 
 });
 
 document.getElementById('BRHT').addEventListener('change', function (e) {

@@ -1,4 +1,5 @@
 @media only screen and (max-width: 820px) {
+
   header {
     /* 366052 background color*/
 
@@ -97,9 +98,11 @@
   }
 
   .main-nav {
-    display: none;
+    /* display: none; */
   }
-
+  /* .clearfix{
+    display: none;
+  } */
   .menu {
     display: inline-block;
   }
@@ -128,7 +131,7 @@
     /* float: right; */
   }
 }
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 821px) {
   header {
     /* 366052 background color*/
 
@@ -141,24 +144,6 @@
     /* height: auto; */
     /* width: auto\9; ie8 */
   }
-  .sticky{
-    display:inline-block;
-  }
-  .sticky .menu {
-    /* display: none; */
-    display: inline-block;
-    position: fixed;
-    bottom: 5px;
-    right: 8px;
-    border: 5px solid #366052;
-    background-color: #366052;
-    border-radius: 50%;
-
-    width: 35px;
-    height: 35px;
-    font-size: 30px;
-
-  }
 
   .barm {
     /* display: none; */
@@ -170,28 +155,6 @@
   }
   /* new */
   
-
-  .sticky .main-nav li a:link,
-  .sticky .main-nav li a:visited {
-    padding: 10px 0;
-  }
-
-  .sticky .mobile-nav-icon {
-    margin-top: 10px;
-  }
-
-  .sticky .mobile-nav-icon i {
-    color: #555;
-  }
-
-  /* .sticky { */
-  /* float:right; */
-  /* display: contents; */
-  /* position: fixed; */
-  /* bottom: 0px; */
-  /* right: 0px; */
-
-  /* } */
   .logo {
     /* height: ; */
     width: 10vw;
@@ -205,20 +168,11 @@
   }
 
   .main-nav {
-    position:fixed; 
     display: inline-block;
+    /* position:fixed;  */
+    /* display: inline-block; */
+    /* float:right; */
   }
 
-  .menu {
-    display: inline-block;
-  }
- 
-  
-
-  .main-nav li {
-    display: block;
-    padding-bottom: 10px;
-    /* float: right; */
-  }
 }
 

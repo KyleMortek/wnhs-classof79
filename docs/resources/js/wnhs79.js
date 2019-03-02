@@ -6,22 +6,41 @@
 //////////////////////////////////////////////// SMOOTH SCROLLING 
 $(document).ready(function () {
   // $(window).resize(function () {
+
   if ($(window).width() >= 820) {
     // console.log('this is where stick navigation plays a role');
-    //  $('nav').css("display","block");
+    //  $('.clearfix').css("display","block");
     $('*').waypoint(function (direction) {
       // if ($(window).width() >= 820) {
 
       if (direction == "up") {
-        $('nav').slideDown(200);
+         /////////////////////////////
+         /////////////////////////////
+        //  $('nav').slideDown(200);
+        
+        /////////////////////////////
+         /////////////////////////////
+        // console.log("up");
+        // $('nav').addClass('sticky').slideDown(200);
+        // $('.sticky').slideDown(200);
       } else {
-        $('nav').slideUp(200);
-      }
+        if (direction == "down") {
+          // $('nav').slideUp(200);
 
+        }
+        // nav.slideToggle(200);
+
+         /////////////////////////////
+         /////////////////////////////
+
+         /////////////////////////////
+         /////////////////////////////
+        }
+      // }
     }, {
-      offset: '60px'
+      offset: '60px' 
     });
-   }
+  }
 
 
   //////////////////// 
