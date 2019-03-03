@@ -25,6 +25,14 @@
   display: inline-block;
   margin-left: 15px;
 }
+.cost{
+  /* float: right; */
+  text-align: center;
+}
+.shrink{
+  margin-right: 30px;
+  /* padding-right: ; */
+}
 #Payment{
   text-align: center; 
 }
@@ -254,7 +262,7 @@ h2:after{
 }
 h3{
   
-  text-align: center;
+  /* text-align: center; */
 }
 p{
   text-transform: uppercase;

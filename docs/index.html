@@ -55,9 +55,9 @@
           <!-- <li><a href="#Calendar">Calendar</a></li> -->
           <li><a href="#Payment">Payment</a></li>
           <li><a href="#Hotels">Hotels</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#Contact">Invitation</a></li>
         </ul>
-    
+
 
         <!-- <a class="mobile-nav-icon js--menu"><i class="ion-ios-menu"></i></a> -->
       </div>
@@ -88,7 +88,7 @@
 
       <div class="col span-1-of-5 box">
         <img src="resources/css/img/2irishman-pub-eateryr.jpg" alt="Irish">
-        <h3 class="">The Irishman</h3>
+        <h3 class="">The Irishman &nbsp;</h3>
         <div class="event-feature">
           <i class="ion-ios-beer icon-small"></i>
           Drinks
@@ -121,28 +121,7 @@
         </div>
         <div class="event-feature">
           <i class="far fa-clock icon-small"></i>
-          4:30pm &dash; 6pm &hookleftarrow;;
-        </div>
-        <div class="event-feature">
-          <i class="far fa-compass icon-small"></i>
-          <a href="http://maps.apple.com/?daddr=Buffalo+River+History+Tours&dirflg=d&t=h">Get Directions HERE</a>
-        </div>
-      </div>
-
-      <div class="col span-1-of-5 box">
-        <img src="resources/css/img/3BRHTr.png" alt="BRHT">
-        <h3 class="">Buffalo River Tours</h3>
-        <div class="event-feature">
-          <i class="fa fa-ship icon-small"></i>
-          Touring Buffalo
-        </div>
-        <div class="event-feature">
-          <i class="far fa-calendar-alt icon-small"></i>
-          July 19th
-        </div>
-        <div class="event-feature">
-          <i class="far fa-clock icon-small"></i>
-          4:30pm &dash; 6pm &hookleftarrow;;
+          6pm
         </div>
         <div class="event-feature">
           <i class="far fa-compass icon-small"></i>
@@ -172,8 +151,29 @@
       </div>
 
       <div class="col span-1-of-5 box">
-        <img src="resources/css/img/4Buffalo-Bisons-gamer.jpg" alt="">
-        <h3 class="">Bisons Game</h3>
+        <img src="resources/css/img/3BRHTr.png" alt="BRHT">
+        <h3 class="">Buffalo River Tours</h3>
+        <div class="event-feature">
+          <i class="fa fa-ship icon-small"></i>
+          Touring Buffalo
+        </div>
+        <div class="event-feature">
+          <i class="far fa-calendar-alt icon-small"></i>
+          July 20th
+        </div>
+        <div class="event-feature">
+          <i class="far fa-clock icon-small"></i>
+          4:30pm &dash; 6pm &hookleftarrow;;
+        </div>
+        <div class="event-feature">
+          <i class="far fa-compass icon-small"></i>
+          <a href="http://maps.apple.com/?daddr=Buffalo+River+History+Tours&dirflg=d&t=h">Get Directions HERE</a>
+        </div>
+      </div>
+
+      <div class="col span-1-of-5 box">
+        <img src="resources/css/img/4Buffalo-Bisons-gamer.jpg" alt="Bisons">
+        <h3 class="">Bisons Game </h3>&nbsp;
         <div class="event-feature">
           <i class="fa fa-baseball-ball icon-small"></i>
           Baseball Game
@@ -210,6 +210,7 @@
 
     </div>
   </section>
+
   <section class="section-hotels" id="Hotels">
     <h2>Hotels</h2>
     <p>Click below to choose a hotel</p>
@@ -229,9 +230,11 @@
     </div>
 
   </section>
+  <!-- ###########CONTACT~INVITATION############### -->
   <section class="section-contact" id="Contact">
     <div class="row">
-      <h2>Contact</h2>
+      <h2>Invitation</h2>
+      <p>family and friends are welcome!!</p>
     </div>
 
     <div class="row ">
@@ -260,10 +263,32 @@
             <textarea name="message" id="message" cols="20" rows="5" placeholder="Message"></textarea>
           </div>
         </div>
+
+        <!--~~~~~~~~~~~  #of people attending ~~~~~~~~~~~  -->
+        <div class="row CB">
+          <div class="col span-1-of-3 ct">
+            <label for="Tbury"># of Tickets Needed</label>
+          </div>
+          <div class="col span-1-of-4 shrink">
+            <div class="">
+              <select name="tickVal" id="ticketVal">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
         <!-- 2019-02-27 17:25:17 -->
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="Tbury">THE TEWKSBURY LODGE</label>
+            <div class="">$xx</div>
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending">
@@ -275,6 +300,7 @@
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="Irishman">The Irishman Pub</label>
+            <div class="">$xx</div>
           </div>
           <div class="col span-2-of-3 cb">
             <input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending">
@@ -286,17 +312,18 @@
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="Bisons Game">Bisons Game</label>
+            <div class="">$xx</div>
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
             <div class="cbText">Check if attending</div>
-
           </div>
         </div>
 
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="BRHT">Buffalo River History Tour</label>
+            <div class="">$xx</div>
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="BRHT" id="BRHT" placeholder="YES/NO if attending">
@@ -306,19 +333,28 @@
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="OHD">OLD HOME DAYS</label>
+            <div class="">$xx</div>
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending">
             <div class="cbText">Check if attending</div>
           </div>
         </div>
+        <div class="row CB">
+          <div class="col span-1-of-3 ct">
+            <label for="total">Total Cost:</label>
+          </div>
+          <div class="col span-2-of-3 ">
+            <div class=" cost" id="js--total"></div>
+          </div>
+        </div>
         <!-- 2019-02-27 17:25:26 -->
         <div class="row btt">
           <button id="submitBtn">SEND IT</button>
         </div>
-      </form> 
+      </form>
     </div>
-      <div id="Recieved"></div>
+    <div id="Recieved"></div>
   </section>
 
   <!-- #################################################################### -->

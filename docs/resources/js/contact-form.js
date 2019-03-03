@@ -1,47 +1,45 @@
+let totalCost = 0;// * document.getElementById('ticketVal').value;//document.getElementById('js--total');
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
   let name = e.target.elements.name.value;
   let email = e.target.elements.email.value;
   let message = e.target.elements.message.value;
 
-  let Tbury = e.target.elements.Tbury.value;
-  let Irish = e.target.elements.Irishman.value;
-  let BT = e.target.elements.BRHT.value;
-  let Bisons = e.target.elements.Bisons.value;
-  let OHD = e.target.elements.OHD.value;
-
+  let Tbury = e.target.elements.Tbury.checked;
+  let Irish = e.target.elements.Irishman.checked;
+  let BT = e.target.elements.BRHT.checked;
+  let Bisons = e.target.elements.Bisons.checked;
+  let OHD = e.target.elements.OHD.checked;
+  let tickVal = e.target.elements.tickVal.value;
+  let total = document.getElementById('js--total').textContent;
   let data = {
     name: name,
     email: email,
     message: message,
     Tbury: Tbury,
     Irishman: Irish,
-    BT: BT,
+    BT: BT,  
     Bisons: Bisons,
-    OHD: OHD
+    OHD: OHD,
+    tickVal: tickVal,
+    COST: total
   };
   var firebaseRef = firebase.database().ref();
   firebaseRef.child("students").push().set(data);
-  // firebaseRef.child(email).set(data);
-
-  // var rootRef = firebase.database.ref();
-  // document.getElementById('submitBtn').addEventListener('click',function(e){
   document.getElementById('contact-form').remove();
   let sub = document.createElement('p');
   sub.id = "address";
   sub.textContent = 'SUBMISSION RECIEVED';
   document.getElementById('Recieved').appendChild(sub);
-
-  // });
 });
-
+  
 var firebaseRef = firebase.database().ref();
 var urlRef = firebaseRef.child("students");
 urlRef.once("value", function (snapshot) {
   snapshot.forEach(function (child) {
     console.log(
-      ` ${child.key}: 
-    Name:     ${child.val().name}
+    `${child.key}: 
+    Name:     ${child.val().name} 
     Email:    ${child.val().email}
     Message:  ${child.val().message}
     ~~~~~~~~~~~~~Going to~~~~~~~~~~~ 
@@ -49,7 +47,10 @@ urlRef.once("value", function (snapshot) {
     Irishman: ${child.val().Irishman}
     BRHT:     ${child.val().BT}
     Bisons:   ${child.val().Bisons}
-    OHD:      ${child.val().OHD}`
+    OHD:      ${child.val().OHD}
+    ~~~~~~~~~~~~~TOTAL PRICE~~~~~~~~~
+    TickVal:  ${child.val().tickVal}
+    COST:     ${child.val().COST}`
     );
   }); 
 });
@@ -57,26 +58,36 @@ urlRef.once("value", function (snapshot) {
 document.getElementById('BRHT').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  let price = 35;
+  getCost(e,price);
   console.log(e.target.checked);
 });
 document.getElementById('Tbury').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  let price = 10;
+  getCost(e,price);
   console.log(e.target.checked);
 });
 document.getElementById('Irishman').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  let price = 30;
+  getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('BisonsGame').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  let price = 5;
+  getCost(e,price);
   console.log(e.target.checked);
 });
 document.getElementById('OHD').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  let price = 13;
+  getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('check').addEventListener('click', function (e) {
@@ -98,6 +109,26 @@ document.getElementById('check').addEventListener('click', function (e) {
   console.log(e.target.value);
   // e.target.value = ''; 
 });
+
+function getCost(e, price){
+  // price = price ;
+  if(e.target.checked === true){
+    // add cost to total 
+    totalCost = totalCost +price ;// *document.getElementById('ticketVal').value;
+    document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value; 
+  }else{
+    if(totalCost !==0)
+    totalCost = totalCost - price;
+    document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value;
+  }
+ 
+}
+document.getElementById('ticketVal').addEventListener('change',function(e){
+  ticketVal = e.target.value;
+  document.getElementById('js--total').textContent = totalCost*ticketVal;
+  console.log(e.target.value);
+});
+
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
