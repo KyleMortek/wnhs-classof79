@@ -49,6 +49,13 @@
   transition: border-bottom 1s;
 
 }
+.title{
+  text-transform: uppercase;
+  font-family: 'NCAA Michigan St Spartans';
+
+  text-align: center;
+  font-size: 250%;
+}
 .sticky{
   position: fixed;
   top: 0;
