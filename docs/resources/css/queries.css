@@ -176,3 +176,7 @@
 
 }
 
+@font-face{
+  font-family: 'NCAA Michigan St Spartans';
+  src: url("fonts/NCAA\ Michigan\ St\ Spartans.otf") format("opentype");
+}

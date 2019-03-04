@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="vendor/css/normalize.css">
   <link rel="stylesheet" href="vendor/css/Grid.css">
-  <link rel="fonts" href="vendor/fonts/NCAA Michigan St Spartans.otf">
+  <link rel="fonts" href="vendor/fonts/NCAA\ Michigan\ St Spartans.otf">
   <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Srisakdi:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
@@ -243,7 +243,6 @@
   <section class="section-contact" id="Contact">
     <div class="row">
       <h2>Invitation</h2>
-      <p>family and friends are welcome!!</p>
     </div>
 
     <div class="row ">
@@ -253,7 +252,15 @@
             <label for="name">Name</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="text" name="name" id="name" placeholder="*Name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="otherNames">Spouse</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="otherNames" id="otherNames" placeholder="Spouse First Name" required>
           </div>
         </div>
         <div class="row">
@@ -261,7 +268,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="email" name="email" id="email" placeholder="*Email" required>
           </div>
         </div>
         <div class="row">
@@ -321,7 +328,7 @@
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="Bisons Game">Bisons Game</label>
-            <div class="">$xx</div>
+            <div class="">$7.50 Each</div>
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
@@ -350,11 +357,11 @@
           </div>
         </div>
         <div class="row CB">
-          <div class="col span-1-of-3 ct">
+          <div class="col span-1-of-3 totalc">
             <label for="total">Total Cost:</label>
           </div>
           <div class="col span-2-of-3 ">
-            <div class=" cost" id="js--total"></div>
+            <div class="cost" id="js--total"></div>
           </div>
         </div>
         <!-- 2019-02-27 17:25:26 -->

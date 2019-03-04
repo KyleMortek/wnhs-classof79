@@ -1,9 +1,10 @@
 /* #366052 green */
-.row{
+.row {
   max-width: 1140px;
   margin: 0 auto;
 }
-.logo{
+
+.logo {
   float: left;
 
   /* height: 7%; */
@@ -11,7 +12,7 @@
   margin-top: 5px;
 }
 
-.main-nav{
+.main-nav {
   /* position: absolute; */
   display: inline-block;
   float: right;
@@ -21,102 +22,123 @@
   padding-bottom: 15px;
   padding-left: 0px;
 }
-.main-nav li{
+
+.main-nav li {
   display: inline-block;
   margin-left: 15px;
 }
-.cost{
+.totalc{
+  float: left;
+  padding-top: 10px;
+  /* margin-bottom: 100px; */
+}
+.cost {
   /* float: right; */
   text-align: center;
+  font-size: 200%;
+  float: left;
 }
-.shrink{
+
+.shrink {
   margin-right: 30px;
   /* padding-right: ; */
 }
-#Payment{
-  text-align: center; 
+
+#Payment {
+  text-align: center;
 }
+
 .main-nav li a:link,
-.main-nav li a:visited{
+.main-nav li a:visited {
   padding: 8px 0px;
   color: #e6d922d7;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
-  border-bottom:2px solid transparent;
+  border-bottom: 2px solid transparent;
   -webkit-transition: border-bottom 0.2;
   -webkit-transition: border-bottom 1s;
   transition: border-bottom 1s;
 
 }
-.title{
+
+.title {
   text-transform: uppercase;
   font-family: 'NCAA Michigan St Spartans';
 
   text-align: center;
   font-size: 250%;
 }
-.sticky{
+
+.sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #366052;
   -webkit-box-shadow: 0 2px 2px rgb(37, 37, 37);
-          box-shadow: 0 2px 2px rgb(37, 37, 37);
+  box-shadow: 0 2px 2px rgb(37, 37, 37);
   /* z index makes the nav bar be on the top of the screen */
   z-index: 9999;
 }
 
 input[type='checkbox'] {
-  -webkit-appearance:none;
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:5px;
-  border:2px solid #555;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
 }
-#sendmoney{
+
+#sendmoney {
   margin-top: 80px;
 }
-#Recieved{
+
+#Recieved {
   background-color: #366052;
   border: 2px solid #e6d922d7;
   color: #e6d922d7;
   font-size: 40px;
 }
-.CB{
+
+.CB {
   border-color: #010504;
   border: 10px;
   background-color: #4b4a44d7;
-    content: " ";
-    width:auto;
-    /* margin: 0 auto; */
-    margin-top: 30px;
-    margin-bottom: 3px;
+  /* content: " "; */
+  width: auto;
+  /* margin: 0 auto; */
+  margin-top: 30px;
+  margin-bottom: 3px;
   text-transform: uppercase;
 }
-.ct{
+
+.ct {
   padding-top: 20px;
   /* line-height: -10px; */
 }
-.btt{
+
+.btt {
   text-align: center;
   font-size: 40px;
 }
-.section-contact{
+
+.section-contact {
   background-color: #366052;
   color: #e6d922d7;
 }
+
 input[type='checkbox']:checked {
-  background:#e6d922d7;
- 
+  background: #e6d922d7;
+
 }
+
 /* for putting a checkmark in the checkbox */
 input[type='checkbox']:checked:after {
   /* background:#e6d922d7; */
   content: "\2713";
-  color:#366052;
+  color: #366052;
   font-size: 175%;
   margin-left: 3px;
   /* text-align: center; */
@@ -124,31 +146,39 @@ input[type='checkbox']:checked:after {
   /* line-height: 3px; */
   /* padding:10px; */
 }
-.cb .cbText{
+
+.cb .cbText {
   margin-bottom: 10px;
-  
-  
+
+
 }
-.cbText:after{
-  
-    display: block;
-    height: 2px;
-    background-color: #e6d922d7;
-    content: " ";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 3px;
-  
+
+.cbText:after {
+
+  display: block;
+  height: 2px;
+  background-color: #e6d922d7;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 3px;
+
 }
-.cbText{
-  float:left;
+
+.cbText {
+  float: left;
   margin-top: 15px;
   margin-right: 3px;
   /* text-transform: uppercase; */
 }
 
-.clearfix {zoom:1};
+.clearfix {
+  zoom: 1
+}
+
+;
+
 .clearfix {
   content: '.';
   clear: both;
@@ -156,12 +186,14 @@ input[type='checkbox']:checked:after {
   height: 0;
   visibility: hidden;
 }
-.menu{
+
+.menu {
   display: none;
 }
-header{
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
+
+header {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/spartanwithbackgroundnew.jpg);
   background-size: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -182,35 +214,41 @@ header{
   height: 100vh;
   min-height: 100%; */
 }
-.contact-form{
+
+.contact-form {
   width: 60%;
   margin: 0 auto;
 }
+
 input[type=text],
 input[type=email],
 select,
-textarea{
+textarea {
   width: 100%;
   padding: 7px;
   border-radius: 3px;
   border: 1px solid #ccc;
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
   margin: 10px 5px 10px 0;
 }
-*:focus{outline: none;}
-.js--main-nav{
+
+*:focus {
+  outline: none;
 }
+
+.js--main-nav {}
 
 h1,
 h2,
-h3{
+h3 {
   font-weight: 300;
   text-transform: uppercase;
   /* letter-spacing: 1px; */
 }
 
-h2{
+h2 {
   font-size: 180%;
   word-spacing: 2px;
   text-align: center;
@@ -218,7 +256,8 @@ h2{
   letter-spacing: 1px;
   font-family: 'Laila';
 }
-h2:after{
+
+h2:after {
   display: block;
   height: 2px;
   background-color: #e6d922d7;
@@ -228,6 +267,7 @@ h2:after{
   margin-top: 30px;
 
 }
+
 /* h3{
 
   margin-top: 10px;
@@ -241,7 +281,7 @@ h2:after{
 
 } */
 
-.icon-small{
+.icon-small {
   display: inline-block;
   width: 30px;
   text-align: center;
@@ -252,30 +292,36 @@ h2:after{
   margin-top: -5px;
   margin-right: 10px;
 }
-.box{
+
+.box {
   padding: 0%
 }
-.section{
+
+.section {
   padding: 80px;
 }
 
-.box img{
+.box img {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
-.city-feature{
+
+.city-feature {
   margin-bottom: 5px;
 }
-h3{
-  
+
+h3 {
+
   /* text-align: center; */
 }
-p{
+
+p {
   text-transform: uppercase;
   text-align: center;
 }
-.boximg{
+
+.boximg {
   /* border-bottom-left-radius: 50%; */
   text-align: center;
 }

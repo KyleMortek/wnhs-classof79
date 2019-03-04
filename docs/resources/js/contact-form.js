@@ -12,6 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let OHD = e.target.elements.OHD.checked;
   let tickVal = e.target.elements.tickVal.value;
   let total = document.getElementById('js--total').textContent;
+  let otherNames = e.target.elements.OTHERN.value;
   let data = {
     name: name,
     email: email,
@@ -22,7 +23,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     Bisons: Bisons,
     OHD: OHD,
     tickVal: tickVal,
-    COST: total
+    COST: total,
+    otherNames: otherNames
   };
   var firebaseRef = firebase.database().ref();
   firebaseRef.child("students").push().set(data);
@@ -50,7 +52,8 @@ urlRef.once("value", function (snapshot) {
     OHD:      ${child.val().OHD}
     ~~~~~~~~~~~~~TOTAL PRICE~~~~~~~~~
     TickVal:  ${child.val().tickVal}
-    COST:     ${child.val().COST}`
+    COST:     ${child.val().COST}
+    other Invites names: ${child.val().otherNames} `
     );
   }); 
 });
@@ -79,7 +82,7 @@ document.getElementById('Irishman').addEventListener('change', function (e) {
 document.getElementById('BisonsGame').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 5;
+  let price = 7.50;
   getCost(e,price);
   console.log(e.target.checked);
 });
