@@ -100,12 +100,17 @@ document.getElementById('check').addEventListener('click', function (e) {
   let newE2 = document.createElement('p');
   newE2.id = "address";
   newE2.textContent = 'PO BOX 545';
+  let newE4 = document.createElement('p');
+  newE4.id = "accountHolder";
+  newE4.textContent = 'Elaine Townsend';
   let newE3 = document.createElement('p');
   newE3.id = "address1";
   newE3.textContent = 'Clarence, NY 14032';
   newElem.id = 'sendmoney';
   newElem.textContent = "Please send cash and check to this address";
   document.getElementById('check').appendChild(newElem);
+  document.getElementById('check').appendChild(newE4);
+
   document.getElementById('check').appendChild(newE2);
   document.getElementById('check').appendChild(newE3);
 
