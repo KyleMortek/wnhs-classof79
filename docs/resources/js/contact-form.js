@@ -39,29 +39,9 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   document.getElementById('contact-form').remove();
 }); 
   
-var firebaseRef = firebase.database().ref();
-var urlRef = firebaseRef.child("students");
-urlRef.once("value", function (snapshot) {
-  snapshot.forEach(function (child) { 
-    console.log(
-    `${child.key}: 
-    Name:     ${child.val().name} 
-    Email:    ${child.val().email}
-    Message:  ${child.val().message}
-    ~~~~~~~~~~~~~Going to~~~~~~~~~~~ 
-    Tewksbury:${child.val().Tbury}
-    Irishman: ${child.val().Irishman}
-    BRHT:     ${child.val().BT}
-    Bisons:   ${child.val().Bisons}
-    OHD:      ${child.val().OHD}
-    ~~~~~~~~~~~~~TOTAL PRICE~~~~~~~~~
-    TickVal:  ${child.val().tickVal}
-    COST:     ${child.val().COST}
-    other Invites names: ${child.val().otherNames} `
-    );
-  }); 
-});
- 
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////CHECKBOXES 
+////////////////////////////////////////////////////////////////BELOW
 document.getElementById('BRHT').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
@@ -79,7 +59,7 @@ document.getElementById('Tbury').addEventListener('change', function (e) {
 document.getElementById('Irishman').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 30;
+  let price = 0;
   getCost(e, price);
   console.log(e.target.checked);
 });
@@ -93,10 +73,15 @@ document.getElementById('BisonsGame').addEventListener('change', function (e) {
 document.getElementById('OHD').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 13;
+  let price = 0;
   getCost(e, price);
   console.log(e.target.checked);
 });
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////// CASH POBOX
+//////////////////////////////////////////////////////////////// ON CLICK
 document.getElementById('check').addEventListener('click', function (e) {
   e.preventDefault();
   document.getElementById("cashimg").remove();
@@ -122,6 +107,16 @@ document.getElementById('check').addEventListener('click', function (e) {
   // e.target.value = ''; 
 });
 
+///////////////////////////////////////////////PAYPAL ONCLICK
+document.getElementById('ticketVal').addEventListener('change',function(e){
+  ticketVal = e.target.value;
+  document.getElementById('js--total').textContent = totalCost*ticketVal;
+  console.log(e.target.value);
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${totalCost}`; 
+});
+////////////////////////////////////////////////////////////////
+
+
 function getCost(e, price){
   // price = price ;
   if(e.target.checked === true){
@@ -133,25 +128,13 @@ function getCost(e, price){
     totalCost = totalCost - price;
     document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value;
   }
-  document.getElementById('pp').href = `https://www.paypal.me/wnhs79/${document.getElementById('js--total').textContent}`; 
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`; 
  
 }
-document.getElementById('ticketVal').addEventListener('change',function(e){
-  ticketVal = e.target.value;
-  document.getElementById('js--total').textContent = totalCost*ticketVal;
-  console.log(e.target.value);
-  document.getElementById('pp').href = `https://www.paypal.me/wnhs79/${totalCost}`; 
-});
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-// for refreshing database BE CAREFUL WITH THAT 
-// urlRe.remove();
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
 
-// document.getElementById('submitBtn').addEventListener('click',function(e){
-//   document.getElementById('contact-form').remove();
-//   document.getElementById('Recieved').textContent="Submission Complete";
-// });
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
