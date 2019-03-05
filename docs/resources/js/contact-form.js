@@ -129,14 +129,15 @@ function getCost(e, price){
     totalCost = totalCost - price;
     document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value;
   }
+  document.getElementById('pp').href = `https://www.paypal.me/wnhs79/${document.getElementById('js--total').textContent}`; 
  
 }
 document.getElementById('ticketVal').addEventListener('change',function(e){
   ticketVal = e.target.value;
   document.getElementById('js--total').textContent = totalCost*ticketVal;
   console.log(e.target.value);
+  document.getElementById('pp').href = `https://www.paypal.me/wnhs79/${totalCost}`; 
 });
-
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
