@@ -1,4 +1,5 @@
 let totalCost = 0;// * document.getElementById('ticketVal').value;//document.getElementById('js--total');
+// let newtotal = document.getElementById('js--total').textContent;
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
   let name = e.target.elements.name.value;
@@ -12,13 +13,13 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let OHD = e.target.elements.OHD.checked;
   let tickVal = e.target.elements.tickVal.value;
   let total = document.getElementById('js--total').textContent;
-  let otherNames = e.target.elements.OTHERN.value;
+  let otherNames = e.target.elements.otherNames.value;
   let data = {
     name: name,
     email: email,
     message: message,
     Tbury: Tbury,
-    Irishman: Irish,
+    Irishman: Irish, 
     BT: BT,  
     Bisons: Bisons,
     OHD: OHD,
@@ -28,17 +29,20 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   };
   var firebaseRef = firebase.database().ref();
   firebaseRef.child("students").push().set(data);
-  document.getElementById('contact-form').remove();
   let sub = document.createElement('p');
   sub.id = "address";
   sub.textContent = 'SUBMISSION RECIEVED';
-  document.getElementById('Recieved').appendChild(sub);
-});
+  let subt = document.createElement('p');
+  subt.id = "subt";
+  subt.textContent = `Total $${total}, Now Choose payment option`;
+  document.getElementById('Recieved').appendChild(subt);
+  document.getElementById('contact-form').remove();
+}); 
   
 var firebaseRef = firebase.database().ref();
 var urlRef = firebaseRef.child("students");
 urlRef.once("value", function (snapshot) {
-  snapshot.forEach(function (child) {
+  snapshot.forEach(function (child) { 
     console.log(
     `${child.key}: 
     Name:     ${child.val().name} 
@@ -57,7 +61,7 @@ urlRef.once("value", function (snapshot) {
     );
   }); 
 });
-
+ 
 document.getElementById('BRHT').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
