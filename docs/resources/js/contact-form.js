@@ -44,17 +44,24 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////CHECKBOXES 
 ////////////////////////////////////////////////////////////////BELOW
-document.getElementById('BRHT').addEventListener('change', function (e) {
-  e.preventDefault();
-  e.target.checked;
-  let price = 35;
-  getCost(e,price);
-  console.log(e.target.checked);
-});
+// document.getElementById('BRHT').addEventListener('change', function (e) {
+//   e.preventDefault();
+//   e.target.checked;
+//   let price = 35;
+//   getCost(e,price);
+//   console.log(e.target.checked);
+// });
 document.getElementById('Tbury').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
   let price = 10;
+  getCost(e,price);
+  console.log(e.target.checked);
+});
+document.getElementById('T3').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  let price = 7.50+0+0;
   getCost(e,price);
   console.log(e.target.checked);
 });
