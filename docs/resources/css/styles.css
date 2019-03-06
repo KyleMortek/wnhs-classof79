@@ -123,7 +123,9 @@ input[type='checkbox'] {
   text-align: center;
   font-size: 40px;
 }
-
+.rsvp{
+  color: white;
+}
 .section-contact {
   background-color: #366052;
   color: #e6d922d7;
