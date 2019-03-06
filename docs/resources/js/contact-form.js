@@ -7,6 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let message = e.target.elements.message.value;
 
   let Tbury = e.target.elements.Tbury.checked;
+  let T3 = e.target.elements.T3.checked;
   let Irish = e.target.elements.Irishman.checked;
   let BT = e.target.elements.BRHT.checked;
   let Bisons = e.target.elements.Bisons.checked;
@@ -18,10 +19,11 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     name: name,
     email: email,
     message: message,
-    Tbury: Tbury,
+    T3: T3,
+    Tbury: Tbury, // T2 river and tbury
     Irishman: Irish, 
     BT: BT,  
-    Bisons: Bisons,
+    Bisons: Bisons, //tbury and bisons
     OHD: OHD,
     tickVal: tickVal,
     COST: total,
