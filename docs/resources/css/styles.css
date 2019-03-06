@@ -134,6 +134,9 @@ input[type='checkbox']:checked {
 
 }
 
+.rsvp{
+  /* margin-top: 110px; */
+}
 /* for putting a checkmark in the checkbox */
 input[type='checkbox']:checked:after {
   /* background:#e6d922d7; */
@@ -219,7 +222,13 @@ header {
   width: 60%;
   margin: 0 auto;
 }
-
+.foot{
+  border-top: 2px solid #010504;
+  font-size: 300%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'NCAA Michigan St Spartans';
+}
 input[type=text],
 input[type=email],
 select,
