@@ -44,6 +44,14 @@
   font-size: 200%;
   float: left;
 }
+
+.guestG{
+  display: none;
+}
+
+#guest{
+  display: none;
+}
 #js--total{
   margin-top: 5px;
   display: inline-block;

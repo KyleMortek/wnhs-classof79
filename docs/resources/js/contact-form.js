@@ -1,5 +1,6 @@
 let totalCost = 0; // * document.getElementById('ticketVal').value;/document.getElementById('js--total');
-
+let totalCostG = 0;
+let finalCost = totalCost +totalCostG;
 // gets refrence to head Count
 var rootRef = firebase.database().ref();
 rootRef.child('headCount').once("value")
@@ -109,6 +110,34 @@ document.getElementById('BisonsGame').addEventListener('change', function (e) {
   getCost(e, price);
   console.log(e.target.checked);
 });
+
+document.getElementById('TburyG').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  document.getElementById('BisonsGameG').checked= false;
+  document.getElementById('T3G').checked = false;
+  let price = 55;
+  getCostG(e, price);
+  console.log(e.target.checked);
+});
+document.getElementById('T3G').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  document.getElementById('TburyG').checked= false;
+  document.getElementById('BisonsGameG').checked= false;
+  let price = 70;
+  getCostG(e, price);
+  console.log(e.target.checked);
+});
+document.getElementById('BisonsGameG').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  document.getElementById('T3G').checked = false;
+  document.getElementById('TburyG').checked= false;
+  let price = 45;
+  getCostG(e, price);
+  console.log(e.target.checked);
+});
 /// grouped above
 //////////////////////////////
 //////////////////////////////
@@ -126,6 +155,23 @@ document.getElementById('OHD').addEventListener('change', function (e) {
   getCost(e, price);
   console.log(e.target.checked);
 });
+
+document.getElementById('IrishmanG').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  let price = 0;
+  getCost(e, price);
+  console.log(e.target.checked);
+});
+document.getElementById('OHDG').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  let price = 0;
+  getCost(e, price);
+  console.log(e.target.checked);
+});
+
+
 ////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////
@@ -155,7 +201,13 @@ document.getElementById('check').addEventListener('click', function (e) {
   console.log(e.target.value);
   // e.target.value = ''; 
 });
-
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////for 1 or 2 individuals
+// 
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////PAYPAL ONCLICK
 // document.getElementById('ticketVal').addEventListener('change', function (e) {
 //   ticketVal = e.target.value;
@@ -164,7 +216,27 @@ document.getElementById('check').addEventListener('click', function (e) {
 //   document.getElementById('pp').href = `https://paypal.me/wnhs79/${totalCost}`;
 // });
 ////////////////////////////////////////////////////////////////
+document.getElementById('ticketVal').addEventListener('change', function (e) {
+  e.preventDefault();
+  // document.getElementById('BisonsGameG').
+  // document.getElementById('T3G').
+  // document.getElementById('TburyG').
 
+  // document.getElementById('OHDG').
+  // document.getElementById('IrishmanG').
+  if(e.target.value === "2"){
+    console.log('i am here');
+    // document.getElementById('opt1').textContent='';
+    $('.guestG').css('display','inline-block');
+
+    document.getElementById('opt1').textContent= `For 2 Individuals`;
+  }else{
+    // make sure secodn row of checkboxes are gone. 
+    document.getElementById('opt1').textContent= `For 1 Individual`;
+    $('.guestG').css('display','none');
+
+  }
+});
 
 function getCost(e, price) {
   // price = price ;
@@ -172,11 +244,26 @@ function getCost(e, price) {
     // add cost to total 
     totalCost = price;//totalCost + price; // *document.getElementById('ticketVal').value;
     
-    document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
+    document.getElementById('js--total').textContent = totalCost+totalCostG;// * document.getElementById('ticketVal').value;
   } else {
     if (totalCost !== 0)
-      // totalCost = totalCost - price;
-    document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
+      totalCost = price-price;//totalCost - price;
+    document.getElementById('js--total').textContent = totalCost+totalCostG;// * document.getElementById('ticketVal').value;
+  }
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
+
+}
+function getCostG(e, price) {
+  // price = price ;
+  if (e.target.checked === true) {
+    // add cost to total 
+    totalCostG = price;//totalCost + price; // *document.getElementById('ticketVal').value;
+    
+    document.getElementById('js--total').textContent = totalCost +totalCostG;// * document.getElementById('ticketVal').value;
+  } else {
+    if (totalCost !== 0)
+      totalCostG = price-price;//totalCost - price;
+    document.getElementById('js--total').textContent = totalCost+totalCostG;// * document.getElementById('ticketVal').value;
   }
   document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 

@@ -91,7 +91,7 @@
         40th reunion
       </h1>
       <h2>
-          RSVP By April 15th
+        RSVP By April 15th
       </h2>
     </div>
   </section>
@@ -281,26 +281,41 @@
       <h2>1 Invitation Submission</h2>
     </div>
     <div class="row">
-      <p>Member and Significant Other is welcome</p>
-      <p class=""><i class="fa fa-star"></i>Member And Guest <strong>MUST</strong> Complete This RSVP<i class="fa fa-star"></i></p>
-      <p class="note"><i class="fa fa-arrow-up"></i> 1 Person = 1 Submission <i class="fa fa-arrow-up"></i></p>
-      
+      <p>Member and Guest is welcome</p>
+      <p class=""><i class="fa fa-star"></i>Members Only <strong>MUST</strong> Complete This RSVP<i class="fa fa-star"></i></p>
+      <!-- <p class="note"><i class="fa fa-arrow-up"></i> 1 Person = 1 Submission <i class="fa fa-arrow-up"></i></p> -->
+
       <p id="headCount">head count = </p>
     </div>
     <div class="row">
 
     </div>
-    <div class="row ">
+
+    <div class="row">
+      <div class="col span-1-of-3 ct">
+        <label for="Tbury">Choose 1</label>
+      </div>
+      <div class="col span-1-of-4 shrink">
+        <div class="">
+          <select name="tickVal" id="ticketVal">
+            <option value="1">Member</option>
+            <option value="2">Member & Guest</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
       <form id="contact-form">
         <div class="row">
           <div class="col span-1-of-3">
             <label for="name">Name</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="name" id="name" placeholder="*Name (Individual Receiving Invitation)" required>
+            <input type="text" name="name" id="name" placeholder="*Member Name " required>
           </div>
         </div>
-        <div class="row">
+        <div class="row " id="guest">
           <div class="col span-1-of-3">
             <label for="otherNames">Guest</label>
           </div>
@@ -313,7 +328,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="email" name="email" id="email" placeholder="*Email" required>
+            <input type="email" name="email" id="email" placeholder="*Member Email" required>
           </div>
         </div>
         <div class="row">
@@ -328,18 +343,13 @@
         <!--~~~~~~~~~~~  #of people attending ~~~~~~~~~~~  -->
         <!-- <div class="row CB">
           <div class="col span-1-of-3 ct">
-            <label for="Tbury"># of People Attending</label>
+            <label for="Tbury">Choose 1</label>
           </div>
           <div class="col span-1-of-4 shrink">
             <div class="">
               <select name="tickVal" id="ticketVal">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
+                <option value="1">Member</option>
+                <option value="2">Member & Guest</option>
               </select>
             </div>
 
@@ -353,6 +363,8 @@
           </div>
           <div class="col span-2-of-3 cb">
             <input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending">
+            <input class = "guestG" type="checkbox" name="IrishmanG" id="IrishmanG" placeholder="YES/NO if attending">
+
             <div class="cbText">Check if attending</div>
 
           </div>
@@ -374,6 +386,8 @@
           </div>
           <div class="col span-2-of-3">
             <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending">
+            <input class = "guestG" type="checkbox" name="OHDG" id="OHDG" placeholder="YES/NO if attending">
+
             <div class="cbText">Check if attending</div>
           </div>
         </div>
@@ -395,6 +409,8 @@
             </div>
             <div class="col span-2-of-3">
               <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending">
+              <input class = "guestG" type="checkbox" name="TburyG" id="TburyG" placeholder="YES/NO if attending">
+
               <div class="cbText">Check if attending</div>
             </div>
           </div>
@@ -407,6 +423,8 @@
             </div>
             <div class="col span-2-of-3">
               <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
+              <input class = "guestG" type="checkbox" name="BisonsG" id="BisonsGameG" placeholder="YES/NO if attending">
+
               <div class="cbText">Check if attending</div>
             </div>
           </div>
@@ -422,6 +440,8 @@
             </div>
             <div class="col span-2-of-3">
               <input type="checkbox" name="T3" id="T3" placeholder="YES/NO if attending">
+              <input class = "guestG" type="checkbox" name="T3G" id="T3G" placeholder="YES/NO if attending">
+
               <div class="cbText">Check if attending</div>
             </div>
           </div>
@@ -437,7 +457,8 @@
             <div id="js--total"></div>
           </div>
           <div class="col span-1-of-3">
-            <p>for 1 Individual</p>
+            <p id="opt1">for 1 Individual</p>
+            <p id="opt2"></p>
           </div>
         </div>
         <!-- 2019-02-27 17:25:26 -->
