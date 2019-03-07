@@ -85,6 +85,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 document.getElementById('Tbury').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  document.getElementById('BisonsGame').checked= false;
+  document.getElementById('T3').checked = false;
   let price = 55;
   getCost(e, price);
   console.log(e.target.checked);
@@ -92,21 +94,28 @@ document.getElementById('Tbury').addEventListener('change', function (e) {
 document.getElementById('T3').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
+  document.getElementById('Tbury').checked= false;
+  document.getElementById('BisonsGame').checked= false;
   let price = 70;
-  getCost(e, price);
-  console.log(e.target.checked);
-});
-document.getElementById('Irishman').addEventListener('change', function (e) {
-  e.preventDefault();
-  e.target.checked;
-  let price = 0;
   getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('BisonsGame').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price =45;
+  document.getElementById('T3').checked = false;
+  document.getElementById('Tbury').checked= false;
+  let price = 45;
+  getCost(e, price);
+  console.log(e.target.checked);
+});
+/// grouped above
+//////////////////////////////
+//////////////////////////////
+document.getElementById('Irishman').addEventListener('change', function (e) {
+  e.preventDefault();
+  e.target.checked;
+  let price = 0;
   getCost(e, price);
   console.log(e.target.checked);
 });
@@ -161,11 +170,12 @@ function getCost(e, price) {
   // price = price ;
   if (e.target.checked === true) {
     // add cost to total 
-    totalCost = totalCost + price; // *document.getElementById('ticketVal').value;
+    totalCost = price;//totalCost + price; // *document.getElementById('ticketVal').value;
+    
     document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
   } else {
     if (totalCost !== 0)
-      totalCost = totalCost - price;
+      // totalCost = totalCost - price;
     document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
   }
   document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
