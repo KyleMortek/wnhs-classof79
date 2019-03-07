@@ -1,4 +1,13 @@
-let totalCost = 0;// * document.getElementById('ticketVal').value;//document.getElementById('js--total');
+let totalCost = 0; // * document.getElementById('ticketVal').value;/document.getElementById('js--total');
+
+// gets refrence to head Count
+var rootRef = firebase.database().ref();
+rootRef.child('headCount').once("value")
+.then(function (headCountVal) {
+  document.getElementById('headCount').textContent= `head Count = ${headCountVal.val()}`;
+});
+
+
 // let newtotal = document.getElementById('js--total').textContent;
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -9,23 +18,25 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let Tbury = e.target.elements.Tbury.checked;
   let T3 = e.target.elements.T3.checked;
   let Irish = e.target.elements.Irishman.checked;
-  let BT = e.target.elements.BRHT.checked;
+  // let BT = e.target.elements.BRHT.checked;
   let Bisons = e.target.elements.Bisons.checked;
   let OHD = e.target.elements.OHD.checked;
-  let tickVal = e.target.elements.tickVal.value;
+  // let tickVal = e.target.elements.tickVal.value;
   let total = document.getElementById('js--total').textContent;
   let otherNames = e.target.elements.otherNames.value;
+
+
   let data = {
     name: name,
     email: email,
     message: message,
     T3: T3,
     Tbury: Tbury, // T2 river and tbury
-    Irishman: Irish, 
-    BT: BT,  
+    Irishman: Irish,
+    // BT: BT,
     Bisons: Bisons, //tbury and bisons
     OHD: OHD,
-    tickVal: tickVal,
+    // tickVal: tickVal,
     COST: total,
     otherNames: otherNames
   };
@@ -38,9 +49,29 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   subt.id = "subt";
   subt.textContent = `Total $${total}, Now Choose payment option`;
   document.getElementById('Recieved').appendChild(subt);
-  document.getElementById('contact-form').remove();
-}); 
   
+  
+  // create child named headcount
+  // var firebaseHeadCount = firebase.database().ref()
+  
+  var rootRef = firebase.database().ref();
+  rootRef.child('headCount').once("value")
+  .then(function (headCountVal) {
+    let headNum = headCountVal.val()+1;
+    rootRef.child("headCount").set(headNum);
+    document.getElementById('headCount').textContent= `head Count = ${headNum}`;
+  });
+    
+  
+  document.getElementById('contact-form').remove();
+  // let headCount = 
+  // let hd = {
+  //   headCount: headCount+1
+  // }
+  // firebaseRef.child("headCount").set(hd);
+
+ 
+});
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////CHECKBOXES 
 ////////////////////////////////////////////////////////////////BELOW
@@ -54,15 +85,15 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 document.getElementById('Tbury').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 10;
-  getCost(e,price);
+  let price = 55;
+  getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('T3').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 7.50+0+0;
-  getCost(e,price);
+  let price = 70;
+  getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('Irishman').addEventListener('change', function (e) {
@@ -75,8 +106,8 @@ document.getElementById('Irishman').addEventListener('change', function (e) {
 document.getElementById('BisonsGame').addEventListener('change', function (e) {
   e.preventDefault();
   e.target.checked;
-  let price = 7.50;
-  getCost(e,price);
+  let price =45;
+  getCost(e, price);
   console.log(e.target.checked);
 });
 document.getElementById('OHD').addEventListener('change', function (e) {
@@ -117,28 +148,28 @@ document.getElementById('check').addEventListener('click', function (e) {
 });
 
 ///////////////////////////////////////////////PAYPAL ONCLICK
-document.getElementById('ticketVal').addEventListener('change',function(e){
-  ticketVal = e.target.value;
-  document.getElementById('js--total').textContent = totalCost*ticketVal;
-  console.log(e.target.value);
-  document.getElementById('pp').href = `https://paypal.me/wnhs79/${totalCost}`; 
-});
+// document.getElementById('ticketVal').addEventListener('change', function (e) {
+//   ticketVal = e.target.value;
+//   document.getElementById('js--total').textContent = totalCost * ticketVal;
+//   console.log(e.target.value);
+//   document.getElementById('pp').href = `https://paypal.me/wnhs79/${totalCost}`;
+// });
 ////////////////////////////////////////////////////////////////
 
 
-function getCost(e, price){
+function getCost(e, price) {
   // price = price ;
-  if(e.target.checked === true){
+  if (e.target.checked === true) {
     // add cost to total 
-    totalCost = totalCost +price ;// *document.getElementById('ticketVal').value;
-    document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value; 
-  }else{
-    if(totalCost !==0)
-    totalCost = totalCost - price;
-    document.getElementById('js--total').textContent = totalCost*document.getElementById('ticketVal').value;
+    totalCost = totalCost + price; // *document.getElementById('ticketVal').value;
+    document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
+  } else {
+    if (totalCost !== 0)
+      totalCost = totalCost - price;
+    document.getElementById('js--total').textContent = totalCost;// * document.getElementById('ticketVal').value;
   }
-  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`; 
- 
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
+
 }
 
 ////////////////////////////////////////

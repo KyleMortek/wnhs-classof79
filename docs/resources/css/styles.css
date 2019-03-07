@@ -140,6 +140,9 @@ input[type='checkbox']:checked {
 .rsvp{
   /* margin-top: 110px; */
 }
+.note{
+  text-transform: none;
+}
 /* for putting a checkmark in the checkbox */
 input[type='checkbox']:checked:after {
   /* background:#e6d922d7; */
