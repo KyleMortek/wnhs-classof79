@@ -22,9 +22,18 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   // let BT = e.target.elements.BRHT.checked;
   let Bisons = e.target.elements.Bisons.checked;
   let OHD = e.target.elements.OHD.checked;
-  // let tickVal = e.target.elements.tickVal.value;
+  let tickVal = e.target.elements.tickVal.value;
   let total = document.getElementById('js--total').textContent;
   let otherNames = e.target.elements.otherNames.value;
+
+
+  // guest
+  let TburyG = e.target.elements.Tbury.checked;
+  let T3G = e.target.elements.T3.checked;
+  let IrishG = e.target.elements.Irishman.checked;
+  // let BT = e.target.elements.BRHT.checked;
+  let BisonsG = e.target.elements.Bisons.checked;
+  let OHDG = e.target.elements.OHD.checked;
 
 
   let data = {
@@ -37,7 +46,15 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     // BT: BT,
     Bisons: Bisons, //tbury and bisons
     OHD: OHD,
-    // tickVal: tickVal,
+    tickVal: tickVal,//mem or mem & guest
+
+    //guest
+    TburyG: TburyG, //t2
+    T3G: T3G,       //t3
+    BisonsG:BisonsG,//tburyg bisong
+    IrishG:IrishG,
+    OHDG:OHDG,
+
     COST: total,
     otherNames: otherNames
   };
