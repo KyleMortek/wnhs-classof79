@@ -191,7 +191,7 @@ document.getElementById('check').addEventListener('click', function (e) {
   newE3.id = "address1";
   newE3.textContent = 'Clarence, NY 14032';
   newElem.id = 'sendmoney';
-  newElem.textContent = "Please send cash and check to this address";
+  newElem.textContent = "Please send cash and check to this address BY April 15th";
   document.getElementById('check').appendChild(newElem);
   document.getElementById('check').appendChild(newE4);
 
