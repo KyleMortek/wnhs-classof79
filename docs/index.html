@@ -56,7 +56,7 @@
           <!-- <li><a href="#Calendar">Calendar</a></li> -->
           <li><a href="#Payment">Payment</a></li>
           <li><a href="#Hotels">Hotels</a></li>
-          <li><a href="#Contact">Invitation</a></li>
+          <li><a href="#Contact">RSVP</a></li>
         </ul>
 
 
@@ -278,7 +278,7 @@
   <!-- ###########CONTACT~INVITATION############### -->
   <section class="section-contact" id="Contact">
     <div class="row">
-      <h2>1 Invitation Submission</h2>
+      <h2>RSVP Submission</h2>
     </div>
     <div class="row">
       <p>Member and Guest is welcome</p>
@@ -355,15 +355,29 @@
 
           </div>
         </div> -->
-
+        <div class="row">
+          <p>M = Member</p>
+          <p id="gg">G = Guest</p>
+          
+        </div>
         <div class="row CB">
           <div class="col span-1-of-3 ct">
             <label for="Irishman">The Irishman Pub</label>
             <div class="">Cash Bar</div>
           </div>
           <div class="col span-2-of-3 cb">
-            <input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending">
-            <input class = "guestG" type="checkbox" name="IrishmanG" id="IrishmanG" placeholder="YES/NO if attending">
+            <label class="cbl" for=""><div class="m">M:</div><input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending"></label>
+
+
+            <!-- <input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending"> -->
+
+            <label class="cbl guestG" for="">
+                <div class="m">G:</div>
+
+              <input class="guestG" type="checkbox" name="IrishmanG" id="IrishmanG" placeholder="YES/NO if attending">
+            </label>
+
+
 
             <div class="cbText">Check if attending</div>
 
@@ -385,8 +399,15 @@
             <div class="">Cash Event</div>
           </div>
           <div class="col span-2-of-3">
-            <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending">
-            <input class = "guestG" type="checkbox" name="OHDG" id="OHDG" placeholder="YES/NO if attending">
+            <label class="cbl" for="">  <div class="m">M:</div> <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending"></label>
+            <!-- <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending"> -->
+
+            <label class="cbl guestG" for="">
+                <div class="m">G:</div>
+              
+              <input class="guestG" type="checkbox" name="OHDG" id="OHDG" placeholder="YES/NO if attending"></label>
+
+
 
             <div class="cbText">Check if attending</div>
           </div>
@@ -408,9 +429,15 @@
               <div class="">$55</div>
             </div>
             <div class="col span-2-of-3">
-              <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending">
-              <input class = "guestG" type="checkbox" name="TburyG" id="TburyG" placeholder="YES/NO if attending">
-
+              <label class="cbl" for="">
+                <div class="m">M:</div>
+                <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending">
+              </label>
+              <label class="cbl guestG" for="">
+                  <div class="m">G:</div>
+                
+                <input class="guestG" type="checkbox" name="TburyG" id="TburyG" placeholder="YES/NO if attending">
+              </label>
               <div class="cbText">Check if attending</div>
             </div>
           </div>
@@ -422,8 +449,17 @@
               <div class="">$45</div>
             </div>
             <div class="col span-2-of-3">
-              <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
-              <input class = "guestG" type="checkbox" name="BisonsG" id="BisonsGameG" placeholder="YES/NO if attending">
+              <label class="cbl" for="">
+                  <div class="m">M:</div>
+                <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
+              </label>
+
+              <label class="cbl guestG" for="">
+                  <div class="m">G:</div>
+                
+                <input class="guestG" type="checkbox" name="BisonsG" id="BisonsGameG" placeholder="YES/NO if attending">
+              </label>
+
 
               <div class="cbText">Check if attending</div>
             </div>
@@ -439,10 +475,18 @@
               <div class="">$70</div>
             </div>
             <div class="col span-2-of-3">
-              <input type="checkbox" name="T3" id="T3" placeholder="YES/NO if attending">
-              <input class = "guestG" type="checkbox" name="T3G" id="T3G" placeholder="YES/NO if attending">
+              <label class="cbl" for="">
+                  <div class="m">M:</div>
+                <input type="checkbox" name="T3" id="T3" placeholder="YES/NO if attending">
+              </label>
 
-              <div class="cbText">Check if attending</div>
+              <label class="cbl guestG" for="">
+                <div class="m">G:</div>
+                              <input class="guestG" type="checkbox" name="T3G" id="T3G" placeholder="YES/NO if attending">
+                </label>
+
+
+              <div class="cbText">Check if attending </div>
             </div>
           </div>
         </div>

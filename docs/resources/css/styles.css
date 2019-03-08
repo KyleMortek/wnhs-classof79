@@ -107,7 +107,26 @@ input[type='checkbox'] {
   border-radius: 5px;
   border: 2px solid #555;
 }
+.m{
+  position: relative;
+  display: inline-block;
+  top: -15px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  /* line-height: 100px; */
 
+}
+#gg{
+  display: none;
+}
+#ppp{
+  text-align: center;
+}
+.cbl{
+/* line-height: 40px */
+margin-left: 10px;
+}
 #sendmoney {
   margin-top: 80px;
 }
