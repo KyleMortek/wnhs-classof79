@@ -228,12 +228,14 @@ document.getElementById('ticketVal').addEventListener('change', function (e) {
     console.log('i am here');
     // document.getElementById('opt1').textContent='';
     $('.guestG').css('display','inline-block');
+    $('#guest').css('display','block');
 
     document.getElementById('opt1').textContent= `For 2 Individuals`;
   }else{
     // make sure secodn row of checkboxes are gone. 
     document.getElementById('opt1').textContent= `For 1 Individual`;
     $('.guestG').css('display','none');
+    $('#guest').css('display','none');
 
   }
 });
