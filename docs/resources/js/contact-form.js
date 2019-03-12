@@ -66,6 +66,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let subt = document.createElement('p');
   subt.id = "subt";
   subt.textContent = `Total $${total}, Now Choose payment option`;
+  document.getElementById('Recieved').appendChild(sub);
+
   document.getElementById('Recieved').appendChild(subt);
   
   
