@@ -73,11 +73,10 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   
   // create child named headcount
   // var firebaseHeadCount = firebase.database().ref()
-  
   var rootRef = firebase.database().ref();
   rootRef.child('headCount').once("value")
   .then(function (headCountVal) {
-    let headNum = headCountVal.val()+1;
+    let headNum = headCountVal.val()+parseInt(tickVal);
     rootRef.child("headCount").set(headNum);
     document.getElementById('headCount').textContent= `head Count = ${headNum}`;
   });
@@ -92,6 +91,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
  
 });
+
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////CHECKBOXES 
 ////////////////////////////////////////////////////////////////BELOW
