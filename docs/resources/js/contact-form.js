@@ -28,12 +28,12 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
 
   // guest
-  let TburyG = e.target.elements.Tbury.checked;
-  let T3G = e.target.elements.T3.checked;
-  let IrishG = e.target.elements.Irishman.checked;
+  let TburyG = e.target.elements.TburyG.checked;
+  let T3G = e.target.elements.T3G.checked;
+  let IrishG = e.target.elements.IrishmanG.checked;
   // let BT = e.target.elements.BRHT.checked;
-  let BisonsG = e.target.elements.Bisons.checked;
-  let OHDG = e.target.elements.OHD.checked;
+  let BisonsG = e.target.elements.BisonsG.checked;
+  let OHDG = e.target.elements.OHDG.checked;
 
 
   let data = {
