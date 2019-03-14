@@ -1,18 +1,21 @@
-let totalCost = 0; 
+let totalCost = 0;
 let totalCostG = 0;
 let finalCost = totalCost + totalCostG;
+
 // gets refrence to head Count
 var rootRef = firebase.database().ref();
+
 rootRef.child('headCount').once("value")
   .then(function (headCountVal) {
     document.getElementById('headCount').textContent = `head Count = ${headCountVal.val()}`;
   });
+
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
+
   let name = e.target.elements.name.value;
   let email = e.target.elements.email.value;
   let message = e.target.elements.message.value;
-
   let Tbury = e.target.elements.Tbury.checked;
   let T3 = e.target.elements.T3.checked;
   let Irish = e.target.elements.Irishman.checked;
@@ -21,7 +24,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let tickVal = e.target.elements.tickVal.value;
   let total = document.getElementById('js--total').textContent;
   let otherNames = e.target.elements.otherNames.value;
-
 
   // guest
   let TburyG = e.target.elements.TburyG.checked;
@@ -51,29 +53,40 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     COST: total,
     otherNames: otherNames
   };
+
   var firebaseRef = firebase.database().ref();
+
   firebaseRef.child("students").push().set(data);
+
   let sub = document.createElement('p');
+
   sub.id = "address";
   sub.textContent = 'SUBMISSION RECIEVED';
+
   let subt = document.createElement('p');
+
   subt.id = "subt";
   subt.textContent = `Total $${total}, Now Choose payment option`;
+
   document.getElementById('Recieved').appendChild(sub);
   document.getElementById('Recieved').appendChild(subt);
+
   // updates headcount value
   var rootRef = firebase.database().ref();
+
   rootRef.child('headCount').once("value")
     .then(function (headCountVal) {
       let headNum = headCountVal.val() + parseInt(tickVal);
+
       rootRef.child("headCount").set(headNum);
       document.getElementById('headCount').textContent = `head Count = ${headNum}`;
     });
+
   document.getElementById('contact-form').remove();
 });
 
 ////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////CHECKBOXES 
+////////////////////////////////////////////////////////////////CHECKBOXES
 ////////////////////////////////////////////////////////////////BELOW
 // member
 document.getElementById('Tbury').addEventListener('change', function (e) {
@@ -83,6 +96,7 @@ document.getElementById('Tbury').addEventListener('change', function (e) {
   let price = 55;
   getCost(e, price);
 });
+
 document.getElementById('T3').addEventListener('change', function (e) {
   e.preventDefault();
   document.getElementById('Tbury').checked = false;
@@ -90,6 +104,7 @@ document.getElementById('T3').addEventListener('change', function (e) {
   let price = 70;
   getCost(e, price);
 });
+
 document.getElementById('BisonsGame').addEventListener('change', function (e) {
   e.preventDefault();
   document.getElementById('T3').checked = false;
@@ -106,6 +121,7 @@ document.getElementById('TburyG').addEventListener('change', function (e) {
   let price = 55;
   getCostG(e, price);
 });
+
 document.getElementById('T3G').addEventListener('change', function (e) {
   e.preventDefault();
   document.getElementById('TburyG').checked = false;
@@ -113,6 +129,7 @@ document.getElementById('T3G').addEventListener('change', function (e) {
   let price = 70;
   getCostG(e, price);
 });
+
 document.getElementById('BisonsGameG').addEventListener('change', function (e) {
   e.preventDefault();
   document.getElementById('T3G').checked = false;
@@ -120,51 +137,62 @@ document.getElementById('BisonsGameG').addEventListener('change', function (e) {
   let price = 45;
   getCostG(e, price);
 });
+
 /// grouped above
 //////////////////////////////
 //////////////////////////////
 ////////////////////////////// member
-// might not need these listeners below. 
+// might not need these listeners below.
 document.getElementById('Irishman').addEventListener('change', function (e) {
   e.preventDefault();
   let price = 0;
   getCost(e, price);
 });
+
 document.getElementById('OHD').addEventListener('change', function (e) {
   e.preventDefault();
   let price = 0;
   getCost(e, price);
 });
+
 //////////////////////////// guest
 document.getElementById('IrishmanG').addEventListener('change', function (e) {
   e.preventDefault();
   let price = 0;
   getCost(e, price);
 });
+
 document.getElementById('OHDG').addEventListener('change', function (e) {
   e.preventDefault();
   let price = 0;
   getCost(e, price);
 });
 
-
 //////////////////////////////////////////////////////////////// CASH POBOX
 //////////////////////////////////////////////////////////////// ON CLICK
 document.getElementById('check').addEventListener('click', function (e) {
   e.preventDefault();
+
   document.getElementById("cashimg").remove();
+
   let newElem = document.createElement('p');
   let newE2 = document.createElement('p');
+
   newE2.id = "address";
   newE2.textContent = 'PO BOX 545';
+
   let newE4 = document.createElement('p');
+
   newE4.id = "accountHolder";
   newE4.textContent = 'Elaine Townsend';
+
   let newE3 = document.createElement('p');
+
   newE3.id = "address1";
   newE3.textContent = 'Clarence, NY 14032';
   newElem.id = 'sendmoney';
   newElem.textContent = "Please send cash and check to this address BY April 15th";
+
   document.getElementById('check').appendChild(newElem);
   document.getElementById('check').appendChild(newE4);
   document.getElementById('check').appendChild(newE2);
@@ -176,14 +204,17 @@ document.getElementById('check').addEventListener('click', function (e) {
 ////////////////////////////////////////////////////////////////
 document.getElementById('ticketVal').addEventListener('change', function (e) {
   e.preventDefault();
+
   if (e.target.value === "2") {
     $('.guestG').css('display', 'inline-block');
     $('#guest').css('display', 'block');
     $('#gg').css('display', 'block');
+
     document.getElementById('opt1').textContent = `For 2 Individuals`;
   } else {
-    // make sure secodn row of checkboxes are gone. 
+    // make sure secodn row of checkboxes are gone.
     document.getElementById('opt1').textContent = `For 1 Individual`;
+
     $('.js-guest').css('display', 'none');
   }
 });
@@ -195,10 +226,10 @@ function getCost(e, price) {
   } else {
     // if (totalCost !== 0)
     totalCost = price - price;
-    document.getElementById('js--total').textContent = totalCost + totalCostG; 
+    document.getElementById('js--total').textContent = totalCost + totalCostG;
   }
-  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 }
 
 function getCostG(e, price) {
@@ -210,6 +241,6 @@ function getCostG(e, price) {
     totalCostG = price - price;
     document.getElementById('js--total').textContent = totalCost + totalCostG;
   }
-  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 }
