@@ -309,7 +309,7 @@
                 <option value="2">Member & Guest</option>
               </select>
             </div>
-    
+
           </div>
         </div>
         <div class="row">
@@ -320,7 +320,7 @@
             <input type="text" name="name" id="name" placeholder="*Member Name " required>
           </div>
         </div>
-        <div class="row " id="guest">
+        <div class="row js-guest" id="guest">
           <div class="col span-1-of-3">
             <label for="otherNames">Guest</label>
           </div>
@@ -362,8 +362,8 @@
         </div> -->
         <div class="row">
           <p>M = Member</p>
-          <p id="gg">G = Guest</p>
-          
+          <p class ="js-guest" id="gg">G = Guest</p>
+
         </div>
         <div class="row CB">
           <div class="col span-1-of-3 ct">
@@ -371,15 +371,17 @@
             <div class="">Cash Bar</div>
           </div>
           <div class="col span-2-of-3 cb">
-            <label class="cbl" for=""><div class="m">M:</div><input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending"></label>
+            <label class="cbl" for="">
+              <div class="m">M:</div><input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending">
+            </label>
 
 
             <!-- <input type="checkbox" name="Irishman" id="Irishman" placeholder="YES/NO if attending"> -->
 
-            <label class="cbl guestG" for="">
-                <div class="m">G:</div>
+            <label class="cbl guestG js-guest" for="">
+              <div class="m">G:</div>
 
-              <input class="guestG" type="checkbox" name="IrishmanG" id="IrishmanG" placeholder="YES/NO if attending">
+              <input class="guestG js-guest" type="checkbox" name="IrishmanG" id="IrishmanG" placeholder="YES/NO if attending">
             </label>
 
 
@@ -404,13 +406,16 @@
             <div class="">Cash Event</div>
           </div>
           <div class="col span-2-of-3">
-            <label class="cbl" for="">  <div class="m">M:</div> <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending"></label>
+            <label class="cbl" for="">
+              <div class="m">M:</div> <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending">
+            </label>
             <!-- <input type="checkbox" name="OHD" id="OHD" placeholder="YES/NO if attending"> -->
 
-            <label class="cbl guestG" for="">
-                <div class="m">G:</div>
-              
-              <input class="guestG" type="checkbox" name="OHDG" id="OHDG" placeholder="YES/NO if attending"></label>
+            <label class="cbl guestG js-guest" for="">
+              <div class="m">G:</div>
+
+              <input class="guestG js-guest" type="checkbox" name="OHDG" id="OHDG" placeholder="YES/NO if attending">
+            </label>
 
 
 
@@ -438,10 +443,10 @@
                 <div class="m">M:</div>
                 <input type="checkbox" name="Tbury" id="Tbury" placeholder="YES/NO if attending">
               </label>
-              <label class="cbl guestG" for="">
-                  <div class="m">G:</div>
-                
-                <input class="guestG" type="checkbox" name="TburyG" id="TburyG" placeholder="YES/NO if attending">
+              <label class="cbl guestG js-guest" for="">
+                <div class="m">G:</div>
+
+                <input class="guestG js-guest" type="checkbox" name="TburyG" id="TburyG" placeholder="YES/NO if attending">
               </label>
               <div class="cbText">Check if attending</div>
             </div>
@@ -455,14 +460,14 @@
             </div>
             <div class="col span-2-of-3">
               <label class="cbl" for="">
-                  <div class="m">M:</div>
+                <div class="m">M:</div>
                 <input type="checkbox" name="Bisons" id="BisonsGame" placeholder="YES/NO if attending">
               </label>
 
-              <label class="cbl guestG" for="">
-                  <div class="m">G:</div>
-                
-                <input class="guestG" type="checkbox" name="BisonsG" id="BisonsGameG" placeholder="YES/NO if attending">
+              <label class="cbl guestG js-guest" for="">
+                <div class="m">G:</div>
+
+                <input class="guestG js-guest" type="checkbox" name="BisonsG" id="BisonsGameG" placeholder="YES/NO if attending">
               </label>
 
 
@@ -481,14 +486,14 @@
             </div>
             <div class="col span-2-of-3">
               <label class="cbl" for="">
-                  <div class="m">M:</div>
+                <div class="m">M:</div>
                 <input type="checkbox" name="T3" id="T3" placeholder="YES/NO if attending">
               </label>
 
-              <label class="cbl guestG" for="">
+              <label class="cbl guestG js-guest" for="">
                 <div class="m">G:</div>
-                              <input class="guestG" type="checkbox" name="T3G" id="T3G" placeholder="YES/NO if attending">
-                </label>
+                <input class="guestG js-guest" type="checkbox" name="T3G" id="T3G" placeholder="YES/NO if attending">
+              </label>
 
 
               <div class="cbText">Check if attending </div>
