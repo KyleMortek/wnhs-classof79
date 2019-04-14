@@ -1,10 +1,14 @@
-
+let totalCost = 0; 
+let totalCostG = 0;
 
 function onChanger(id){
   document.getElementById(id).addEventListener('change', function (e) {
     e.preventDefault();
-    let price = 0;
-    getCost(e, price);
+    // console.log(document.getElementById('js--total').textContent)
+    if (document.getElementById('js--total').textContent === ''){
+      let price = 0;
+      getCost(e, price);
+    }
   });
 }
 
@@ -33,6 +37,35 @@ function onChangeGroup(id, price,elem1,elem2){
       }
     }
   });
+}
+
+////////////////////////////////////////////////////////////////
+///////////////////tickVal and getcost//////////////////////////
+////////////////////////////////////////////////////////////////
+function getCost(e, price) {
+  if (e.target.checked === true) {
+    totalCost = price;
+    document.getElementById('js--total').textContent = totalCost + totalCostG;
+  } else {
+    // if (totalCost !== 0)
+    totalCost = price - price;
+    document.getElementById('js--total').textContent = totalCost + totalCostG; 
+  }
+  document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
+
+}
+
+function getCostG(e, price) {
+  if (e.target.checked === true) {
+    totalCostG = price;
+    document.getElementById('js--total').textContent = totalCost + totalCostG;
+  } else {
+    // if (totalCost !== 0)
+    totalCostG = price - price;
+    document.getElementById('js--total').textContent = totalCost + totalCostG;
+  }
+  document.getElementById('pp').href = 
+  `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 }
 
 function saveFire(e){
