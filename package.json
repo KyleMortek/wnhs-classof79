@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KyleMortek/wnhs-classof79#readme",
   "dependencies": {
+    "browserify": "^16.2.3",
     "nodemailer": "^6.1.0"
   }
 }
