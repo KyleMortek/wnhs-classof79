@@ -97,11 +97,11 @@ onChanger('OHD');
 onChanger('IrishmanG');
 onChanger('OHDG');
 
-onChangeGroup('BisonsGameG',45,'T3G','TburyG');
+onChangeGroup('BisonsGameG',50,'T3G','TburyG');
 onChangeGroup('T3G',70,'BisonsGameG','TburyG');
 onChangeGroup('TburyG',55,'BisonsGameG','T3G');
 onChangeGroup('Tbury',55,'BisonsGame','T3');
-onChangeGroup('BisonsGame',45,'T3','Tbury');
+onChangeGroup('BisonsGame',50,'T3','Tbury');
 onChangeGroup('T3',70,'BisonsGame','Tbury');
 onChangeGroup('ticketVal',0,'','');
 //////////////////////////////////////////////////////////////// CASH POBOX
