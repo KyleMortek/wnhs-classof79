@@ -51,6 +51,7 @@ function getCost(e, price) {
     totalCost = price - price;
     document.getElementById('js--total').textContent = totalCost + totalCostG; 
   }
+  document.getElementById('pp').textContent= "SEND AS FRIENDS AND FAMILY TO AVOID FEES, IF YOU STILL WISH TO SEND THROUGH GOODS AND SERVICES PLEASE ADD !) DOLLARS TO TOTAL COST"
   document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 
 }
