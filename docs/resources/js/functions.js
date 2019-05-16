@@ -12,13 +12,14 @@ function onChanger(id){
   });
 }
 
-function onChangeGroup(id, price,elem1,elem2){
+function onChangeGroup(id, price,elem1,elem2,elem3){
   document.getElementById(id).addEventListener('change', function (e){
     e.preventDefault();
     if(id !== 'ticketVal'){
       document.getElementById(elem1).checked = false;
       document.getElementById(elem2).checked = false;
-      if(id[id.length-1] === 'G'){// guest
+      document.getElementById(elem3).checked = false;
+      if(id[id.length-1] === 'G' || id === 'TburyG1'){// guest
         getCostG(e, price);
       }else{//member
         getCost(e, price);
@@ -51,7 +52,6 @@ function getCost(e, price) {
     totalCost = price - price;
     document.getElementById('js--total').textContent = totalCost + totalCostG; 
   }
-  document.getElementById('pp').textContent= "SEND AS FRIENDS AND FAMILY TO AVOID FEES, IF YOU STILL WISH TO SEND THROUGH GOODS AND SERVICES PLEASE ADD !) DOLLARS TO TOTAL COST"
   document.getElementById('pp').href = `https://paypal.me/wnhs79/${document.getElementById('js--total').textContent}`;
 
 }

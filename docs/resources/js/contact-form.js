@@ -18,6 +18,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   let message = e.target.elements.message.value;
 
   let Tbury = e.target.elements.Tbury.checked;
+  let Tbury1 = e.target.elements.Tbury1.checked;
   let T3 = e.target.elements.T3.checked;
   let Irish = e.target.elements.Irishman.checked;
   let Bisons = e.target.elements.Bisons.checked;
@@ -29,6 +30,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
   // guest
   let TburyG = e.target.elements.TburyG.checked;
+  let TburyG1 = e.target.elements.TburyG1.checked;
   let T3G = e.target.elements.T3G.checked;
   let IrishG = e.target.elements.IrishmanG.checked;
   let BisonsG = e.target.elements.BisonsG.checked;
@@ -41,12 +43,14 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     message: message,
     // member
     T3: T3,
+    Tbury1: Tbury1, // T2 river and tbury
     Tbury: Tbury, // T2 river and tbury
     Irishman: Irish,
     Bisons: Bisons, //tbury and bisons
     OHD: OHD,
     tickVal: tickVal, //mem or mem & guest
     //guest
+    TburyG1: TburyG1, //t2
     TburyG: TburyG, //t2
     T3G: T3G, //t3
     BisonsG: BisonsG, //tburyg bisong
@@ -97,12 +101,14 @@ onChanger('OHD');
 onChanger('IrishmanG');
 onChanger('OHDG');
 
-onChangeGroup('BisonsGameG',50,'T3G','TburyG');
-onChangeGroup('T3G',70,'BisonsGameG','TburyG');
-onChangeGroup('TburyG',55,'BisonsGameG','T3G');
-onChangeGroup('Tbury',55,'BisonsGame','T3');
-onChangeGroup('BisonsGame',50,'T3','Tbury');
-onChangeGroup('T3',70,'BisonsGame','Tbury');
+onChangeGroup('TburyG1',35,'BisonsGameG','TburyG','T3G')
+onChangeGroup('TburyG',60,'BisonsGameG','T3G','TburyG1');
+onChangeGroup('BisonsGameG',50,'T3G','TburyG','TburyG1');
+onChangeGroup('T3G',75,'BisonsGameG','TburyG','TburyG1');
+onChangeGroup('Tbury1',35,'BisonsGame','T3','Tbury')
+onChangeGroup('Tbury',60,'BisonsGame','T3','Tbury1');
+onChangeGroup('BisonsGame',50,'T3','Tbury','Tbury1');
+onChangeGroup('T3',75,'BisonsGame','Tbury','Tbury1');
 onChangeGroup('ticketVal',0,'','');
 //////////////////////////////////////////////////////////////// CASH POBOX
 //////////////////////////////////////////////////////////////// ON CLICK
