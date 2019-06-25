@@ -119,7 +119,7 @@ document.getElementById('check').addEventListener('click', function (e) {
   
   let newElem = document.createElement('p');
   newElem.id = 'sendmoney';
-  newElem.textContent = "Please send cash and check to this address BY April 15th";
+  newElem.textContent = "Please send cash and check to this address BY JUNE 30th LAST DAY TO PAY AT THIS ADDRESS";
   
   let newE4 = document.createElement('p');
   newE4.id = "accountHolder";
